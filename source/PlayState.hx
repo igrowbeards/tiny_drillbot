@@ -13,6 +13,8 @@ import org.flixel.FlxText;
 import org.flixel.FlxU;
 import org.flixel.FlxTilemap;
 import org.flixel.FlxObject;
+import org.flixel.plugin.photonstorm.FlxControl;
+import org.flixel.plugin.photonstorm.FlxControlHandler;
 
 class PlayState extends FlxState
 {
@@ -38,17 +40,29 @@ class PlayState extends FlxState
 		//exit.exists = false;
 		add(exit);
 
-
 		// Create Player
 		player = new FlxSprite();
 		player.x = (FlxG.width / 2) - 4;
 		player.makeGraphic(8,10,0xffaa1111);
-		player.y = 20;
+		/*player.y = 20;
 		player.maxVelocity.x = 80;
 		player.maxVelocity.y = 200;
 		player.acceleration.y = 200;
-		player.drag.x = player.maxVelocity.x*4;
+		player.drag.x = player.maxVelocity.x*4;*/
 		add(player);
+
+		if (FlxG.getPlugin(FlxControl) == null) {
+			FlxG.addPlugin(new FlxControl());
+		}
+
+		// The player sprite will accelerate and decelerate smoothly
+		FlxControl.create(player, FlxControlHandler.MOVEMENT_ACCELERATES, FlxControlHandler.STOPPING_DECELERATES);
+		// Enable cursor keys, but only the left and right ones
+		FlxControl.player1.setCursorControl(false, false, true, true);
+		// Gravity will pull the player down
+		FlxControl.player1.setGravity(0, 400);
+		// All speeds are in pixels per second, the follow lets the player run left/right
+		FlxControl.player1.setMovementSpeed(400, 0, 100, 200, 400, 0);
 
 	}
 
@@ -60,7 +74,7 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 
-		player.acceleration.x = 0;
+		/* player.acceleration.x = 0;
 		if(FlxG.keys.LEFT)
 		{
 			player.acceleration.x = -player.maxVelocity.x * 4;
@@ -74,7 +88,7 @@ class PlayState extends FlxState
 		if(FlxG.keys.justPressed("UP") && player.isTouching(FlxObject.FLOOR))
 		{
 			player.velocity.y = -player.maxVelocity.y / 2;
-		}
+		} */
 
 		super.update();
 
