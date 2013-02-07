@@ -19,6 +19,7 @@ class PlayState extends FlxState
 
 	public var level:FlxTilemap;
 	public var player:FlxSprite;
+	public var exit:FlxSprite;
 
 	override public function create():Void
 	{
@@ -31,6 +32,12 @@ class PlayState extends FlxState
 		level = new FlxTilemap();
 		level.loadMap(Assets.getText("assets/level1.txt"),"assets/tiles.png");
 		add(level);
+
+		exit = new FlxSprite(35*8+1,25*8);
+		exit.makeGraphic(14,16,0xff3f3f3f);
+		//exit.exists = false;
+		add(exit);
+
 
 		// Create Player
 		player = new FlxSprite();
@@ -72,5 +79,18 @@ class PlayState extends FlxState
 		super.update();
 
 		FlxG.collide(level,player);
+		FlxG.overlap(player,exit,changeLevel);
+
+		if (player.y > FlxG.height)
+		{
+			FlxG.resetState();
+		}
+
 	}
+
+	public function changeLevel(Player:FlxObject,Exit:FlxObject):Void
+	{
+		FlxG.resetState();
+	}
+
 }
