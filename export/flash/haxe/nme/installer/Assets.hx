@@ -43,6 +43,8 @@ class Assets {
 			
 			resourceClasses.set ("Beep", NME_assets_data_beep_mp3);
 			resourceTypes.set ("Beep", "sound");
+			resourceClasses.set ("assets/bullet.png", NME_assets_bullet_png);
+			resourceTypes.set ("assets/bullet.png", "image");
 			resourceClasses.set ("assets/data/autotiles.png", NME_assets_data_autotiles_png);
 			resourceTypes.set ("assets/data/autotiles.png", "image");
 			resourceClasses.set ("assets/data/autotiles_alt.png", NME_assets_data_autotiles_alt_png);
@@ -115,8 +117,14 @@ class Assets {
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
 			resourceClasses.set ("assets/HaxeFlixel.svg", NME_assets_haxeflixel_svg);
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
+			resourceClasses.set ("assets/level1.dam", NME_assets_level1_dam);
+			resourceTypes.set ("assets/level1.dam", "text");
 			resourceClasses.set ("assets/level1.txt", NME_assets_level1_txt);
 			resourceTypes.set ("assets/level1.txt", "text");
+			resourceClasses.set ("assets/level1_tileset.tmx", NME_assets_level1_tileset_tmx);
+			resourceTypes.set ("assets/level1_tileset.tmx", "text");
+			resourceClasses.set ("assets/mapCSV_Group1_Map1.csv", NME_assets_mapcsv_group1_map1_csv);
+			resourceTypes.set ("assets/mapCSV_Group1_Map1.csv", "text");
 			resourceClasses.set ("assets/tiles.png", NME_assets_tiles_png);
 			resourceTypes.set ("assets/tiles.png", "image");
 			

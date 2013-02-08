@@ -102,6 +102,11 @@ class ApplicationMain {
             return Assets.getSound ("Beep");
          
 		
+		if (inName=="assets/bullet.png")
+			 
+            return Assets.getBitmapData ("assets/bullet.png");
+         
+		
 		if (inName=="assets/data/autotiles.png")
 			 
             return Assets.getBitmapData ("assets/data/autotiles.png");
@@ -282,9 +287,24 @@ class ApplicationMain {
 			 return Assets.getText ("assets/HaxeFlixel.svg");
          
 		
+		if (inName=="assets/level1.dam")
+			 
+			 return Assets.getText ("assets/level1.dam");
+         
+		
 		if (inName=="assets/level1.txt")
 			 
 			 return Assets.getText ("assets/level1.txt");
+         
+		
+		if (inName=="assets/level1_tileset.tmx")
+			 
+			 return Assets.getText ("assets/level1_tileset.tmx");
+         
+		
+		if (inName=="assets/mapCSV_Group1_Map1.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_Map1.csv");
          
 		
 		if (inName=="assets/tiles.png")
@@ -312,6 +332,7 @@ class ApplicationMain {
 }
 
 class NME_assets_data_beep_mp3 extends nme.media.Sound { }
+class NME_assets_bullet_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_alt_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_base_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -348,7 +369,10 @@ class NME_assets_data_vcr_step_png extends nme.display.BitmapData { public funct
 class NME_assets_data_vcr_stop_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_haxeflixel_svg extends nme.utils.ByteArray { }
+class NME_assets_level1_dam extends nme.utils.ByteArray { }
 class NME_assets_level1_txt extends nme.utils.ByteArray { }
+class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
 class NME_assets_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 
 

@@ -8,6 +8,7 @@ import org.flixel.FlxG;
 import org.flixel.FlxPath;
 import org.flixel.FlxSave;
 import org.flixel.FlxSprite;
+import org.flixel.FlxRect;
 import org.flixel.FlxState;
 import org.flixel.FlxText;
 import org.flixel.FlxU;
@@ -15,24 +16,30 @@ import org.flixel.FlxTilemap;
 import org.flixel.FlxObject;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
+import org.flixel.plugin.photonstorm.FlxWeapon;
 
 class PlayState extends FlxState
 {
 
 	public var level:FlxTilemap;
-	public var player:FlxSprite;
+	public var player:Player;
 	public var exit:FlxSprite;
+	public var lazer:FlxWeapon;
 
 	override public function create():Void
 	{
+
+		FlxG.mouse.show();
+
 		#if !neko
 		FlxG.bgColor = 0xffaaaaaa;
 		#else
 		FlxG.camera.bgColor = {rgb: 0x131c1b, a: 0xff};
 		#end
 
+
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/level1.txt"),"assets/tiles.png");
+		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/tiles.png");
 		add(level);
 
 		exit = new FlxSprite(35*8+1,25*8);
@@ -41,29 +48,16 @@ class PlayState extends FlxState
 		add(exit);
 
 		// Create Player
-		player = new FlxSprite();
-		player.x = (FlxG.width / 2) - 4;
-		player.makeGraphic(8,10,0xffaa1111);
-		/*player.y = 20;
-		player.maxVelocity.x = 80;
-		player.maxVelocity.y = 200;
-		player.acceleration.y = 200;
-		player.drag.x = player.maxVelocity.x*4;*/
+		player = new Player();
 		add(player);
 
-		if (FlxG.getPlugin(FlxControl) == null) {
-			FlxG.addPlugin(new FlxControl());
-		}
-
-		// The player sprite will accelerate and decelerate smoothly
-		FlxControl.create(player, FlxControlHandler.MOVEMENT_ACCELERATES, FlxControlHandler.STOPPING_DECELERATES);
-		// Enable cursor keys, but only the left and right ones
-		FlxControl.player1.setCursorControl(false, false, true, true);
-		// Gravity will pull the player down
-		FlxControl.player1.setGravity(0, 400);
-		// All speeds are in pixels per second, the follow lets the player run left/right
-		FlxControl.player1.setMovementSpeed(400, 0, 100, 200, 400, 0);
-
+		lazer = new FlxWeapon("lazer",player, "x", "y");
+		lazer.makeImageBullet(15, "assets/bullet.png");
+		lazer.setFireRate(100);
+		lazer.setBulletSpeed(100);
+		lazer.setBulletElasticity(0);
+		lazer.setBulletLifeSpan(1000);
+		add(lazer.group);
 	}
 
 	override public function destroy():Void
@@ -92,19 +86,30 @@ class PlayState extends FlxState
 
 		super.update();
 
-		FlxG.collide(level,player);
+		FlxG.collide(player,level);
+		FlxG.collide(lazer.group,level,bulletHitLevel);
 		FlxG.overlap(player,exit,changeLevel);
 
 		if (player.y > FlxG.height)
 		{
 			FlxG.resetState();
+			FlxControl.clear();
 		}
 
+		if(FlxG.mouse.justPressed())
+		{
+			lazer.fireAtMouse();
+		}
 	}
 
 	public function changeLevel(Player:FlxObject,Exit:FlxObject):Void
 	{
 		FlxG.resetState();
+		FlxControl.clear();
+	}
+
+	public function bulletHitLevel(bulletRef:FlxObject,levelRef:FlxObject):Void {
+		bulletRef.exists = false;
 	}
 
 }
