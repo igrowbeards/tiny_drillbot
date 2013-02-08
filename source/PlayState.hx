@@ -14,6 +14,10 @@ import org.flixel.FlxText;
 import org.flixel.FlxU;
 import org.flixel.FlxTilemap;
 import org.flixel.FlxObject;
+import org.flixel.FlxParticle;
+import addons.FlxEmitterExt;
+import org.flixel.FlxEmitter;
+import org.flixel.FlxTimer;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
 import org.flixel.plugin.photonstorm.FlxWeapon;
@@ -25,6 +29,7 @@ class PlayState extends FlxState
 	public var player:Player;
 	public var exit:FlxSprite;
 	public var lazer:FlxWeapon;
+	public var emitter:Sparks;
 
 	override public function create():Void
 	{
@@ -58,6 +63,11 @@ class PlayState extends FlxState
 		lazer.setBulletElasticity(0);
 		lazer.setBulletLifeSpan(1000);
 		add(lazer.group);
+
+
+		emitter = new Sparks();
+		add(emitter);
+		emitter.start(false,0.5,0.5,1);
 	}
 
 	override public function destroy():Void
@@ -87,6 +97,7 @@ class PlayState extends FlxState
 		super.update();
 
 		FlxG.collide(player,level);
+		FlxG.collide(emitter,level);
 		FlxG.collide(lazer.group,level,bulletHitLevel);
 		FlxG.overlap(player,exit,changeLevel);
 
