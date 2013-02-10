@@ -14,7 +14,7 @@ class Player extends FlxSprite
 	{
 		super();
 		x = (FlxG.width / 2) - 4;
-		makeGraphic(8,10,0xffaa1111);
+		makeGraphic(8,10,0xff000000);
 
 		if (FlxG.getPlugin(FlxControl) == null) {
 			FlxG.addPlugin(new FlxControl());

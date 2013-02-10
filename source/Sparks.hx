@@ -7,7 +7,7 @@ import org.flixel.FlxTimer;
 
 class Sparks extends FlxEmitter
 {
-	var particles:Int = 100;
+	var particles:Int = 20;
 
 	public function new(x:Float,y:Float):Void
 	{
@@ -19,12 +19,13 @@ class Sparks extends FlxEmitter
 		while( i < particles)
 		{
 			var particle:FlxParticle = new FlxParticle();
-			particle.makeGraphic(1, 1, 0xff00ff00);
+			particle.makeGraphic(1, 1, 0xffffffff);
 			particle.exists = false;
 			this.add(particle);
 			particle.elasticity = 0.5;
 			i++;
 		}
+		bounce = 0.5;
 
 	}
 

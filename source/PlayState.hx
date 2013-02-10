@@ -38,7 +38,7 @@ class PlayState extends FlxState
 		FlxG.mouse.show();
 
 		#if !neko
-		FlxG.bgColor = 0xffaaaaaa;
+		FlxG.bgColor = 0xff000000;
 		#else
 		FlxG.camera.bgColor = {rgb: 0x131c1b, a: 0xff};
 		#end
@@ -105,7 +105,7 @@ class PlayState extends FlxState
 		bulletRef.exists = false;
 		var emitter:FlxEmitter = new Sparks(bulletRef.x,bulletRef.y);
 		emitterGroup.add(emitter);
-		emitter.start(true,.5,0,0);
+		emitter.start(true,2,0,0);
 	}
 
 }
