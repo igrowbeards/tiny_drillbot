@@ -14,6 +14,7 @@ import org.flixel.FlxText;
 import org.flixel.FlxU;
 import org.flixel.FlxTilemap;
 import org.flixel.FlxObject;
+import org.flixel.FlxGroup;
 import org.flixel.FlxParticle;
 import addons.FlxEmitterExt;
 import org.flixel.FlxEmitter;
@@ -29,7 +30,7 @@ class PlayState extends FlxState
 	public var player:Player;
 	public var exit:FlxSprite;
 	public var lazer:FlxWeapon;
-	//public var emitter:Sparks;
+	private var emitterGroup:FlxGroup;
 
 	override public function create():Void
 	{
@@ -49,7 +50,6 @@ class PlayState extends FlxState
 
 		exit = new FlxSprite(35*8+1,25*8);
 		exit.makeGraphic(14,16,0xff3f3f3f);
-		//exit.exists = false;
 		add(exit);
 
 		// Create Player
@@ -64,6 +64,9 @@ class PlayState extends FlxState
 		lazer.setBulletLifeSpan(1000);
 		add(lazer.group);
 
+		emitterGroup = new FlxGroup();
+		add(emitterGroup);
+
 	}
 
 	override public function destroy():Void
@@ -77,6 +80,7 @@ class PlayState extends FlxState
 
 		FlxG.collide(player,level);
 		FlxG.collide(lazer.group,level,bulletHitLevel);
+		FlxG.collide(emitterGroup,level);
 		FlxG.overlap(player,exit,changeLevel);
 
 		if (player.y > FlxG.height)
@@ -100,9 +104,8 @@ class PlayState extends FlxState
 	public function bulletHitLevel(bulletRef:FlxObject,levelRef:FlxObject):Void {
 		bulletRef.exists = false;
 		var emitter:FlxEmitter = new Sparks(bulletRef.x,bulletRef.y);
-		add(emitter);
+		emitterGroup.add(emitter);
 		emitter.start(true,.5,0,0);
-		emitter.bounce = 1;
 	}
 
 }
