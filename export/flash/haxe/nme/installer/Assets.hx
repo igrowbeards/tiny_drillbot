@@ -119,6 +119,8 @@ class Assets {
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
 			resourceClasses.set ("assets/level1.dam", NME_assets_level1_dam);
 			resourceTypes.set ("assets/level1.dam", "text");
+			resourceClasses.set ("assets/level1.dam.bak", NME_assets_level1_dam_bak);
+			resourceTypes.set ("assets/level1.dam.bak", "text");
 			resourceClasses.set ("assets/level1.txt", NME_assets_level1_txt);
 			resourceTypes.set ("assets/level1.txt", "text");
 			resourceClasses.set ("assets/level1_tileset.tmx", NME_assets_level1_tileset_tmx);

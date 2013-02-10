@@ -29,7 +29,7 @@ class PlayState extends FlxState
 	public var player:Player;
 	public var exit:FlxSprite;
 	public var lazer:FlxWeapon;
-	public var emitter:Sparks;
+	//public var emitter:Sparks;
 
 	override public function create():Void
 	{
@@ -64,10 +64,6 @@ class PlayState extends FlxState
 		lazer.setBulletLifeSpan(1000);
 		add(lazer.group);
 
-
-		emitter = new Sparks();
-		add(emitter);
-		emitter.start(false,0.5,0.5,1);
 	}
 
 	override public function destroy():Void
@@ -77,27 +73,9 @@ class PlayState extends FlxState
 
 	override public function update():Void
 	{
-
-		/* player.acceleration.x = 0;
-		if(FlxG.keys.LEFT)
-		{
-			player.acceleration.x = -player.maxVelocity.x * 4;
-		}
-
-		if(FlxG.keys.RIGHT)
-		{
-			player.acceleration.x = player.maxVelocity.x * 4;
-		}
-
-		if(FlxG.keys.justPressed("UP") && player.isTouching(FlxObject.FLOOR))
-		{
-			player.velocity.y = -player.maxVelocity.y / 2;
-		} */
-
 		super.update();
 
 		FlxG.collide(player,level);
-		FlxG.collide(emitter,level);
 		FlxG.collide(lazer.group,level,bulletHitLevel);
 		FlxG.overlap(player,exit,changeLevel);
 
@@ -121,6 +99,10 @@ class PlayState extends FlxState
 
 	public function bulletHitLevel(bulletRef:FlxObject,levelRef:FlxObject):Void {
 		bulletRef.exists = false;
+		var emitter:FlxEmitter = new Sparks(bulletRef.x,bulletRef.y);
+		add(emitter);
+		emitter.start(true,.5,0,0);
+		emitter.bounce = 1;
 	}
 
 }

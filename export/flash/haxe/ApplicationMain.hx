@@ -292,6 +292,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/level1.dam");
          
 		
+		if (inName=="assets/level1.dam.bak")
+			 
+			 return Assets.getText ("assets/level1.dam.bak");
+         
+		
 		if (inName=="assets/level1.txt")
 			 
 			 return Assets.getText ("assets/level1.txt");
@@ -370,6 +375,7 @@ class NME_assets_data_vcr_stop_png extends nme.display.BitmapData { public funct
 class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_haxeflixel_svg extends nme.utils.ByteArray { }
 class NME_assets_level1_dam extends nme.utils.ByteArray { }
+class NME_assets_level1_dam_bak extends nme.utils.ByteArray { }
 class NME_assets_level1_txt extends nme.utils.ByteArray { }
 class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }

@@ -9,16 +9,13 @@ class Sparks extends FlxEmitter
 {
 	var particles:Int = 100;
 
-	public function new():Void
+	public function new(x:Float,y:Float):Void
 	{
 
-		super();
-
-		x = 100;
-		y = 100;
+		super(x,y);
+		bounce = 0.5;
 
 		var i = 0;
-
 		while( i < particles)
 		{
 			var particle:FlxParticle = new FlxParticle();
@@ -30,4 +27,5 @@ class Sparks extends FlxEmitter
 		}
 
 	}
+
 }
