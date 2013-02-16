@@ -23,15 +23,17 @@ class PlayState extends FlxState
 
 	public var level:FlxTilemap;
 	public var spikes:FlxGroup;
+	public var fuelGroup:FlxGroup;
 	public var player:Player;
 	public var exit:FlxSprite;
+	public var totalFuel:Int;
 
 	override public function create():Void
 	{
 
 		FlxG.mouse.show();
 
-		FlxG.bgColor = 0xffcccccc;
+		FlxG.bgColor = 0xff888888;
 
 		level = new FlxTilemap();
 		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/tiles.png");
@@ -42,11 +44,14 @@ class PlayState extends FlxState
 		// Create the Exit
 		exit = new FlxSprite(FlxG.width - 30,FlxG.height - 23);
 		exit.makeGraphic(15,15,0xff666666);
+		exit.exists = false;
 
 		parseSpikes();
+		parseFuel();
 
 		add(level);
 		add(spikes);
+		add(fuelGroup);
 		add(exit);
 		add(player);
 
@@ -63,12 +68,16 @@ class PlayState extends FlxState
 
 		FlxG.collide(player,level);
 		FlxG.overlap(player,spikes,hitSpikes);
+		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,changeLevel);
 
 		if (player.y > FlxG.height)
 		{
-			FlxG.resetState();
-			FlxControl.clear();
+			player.reset((FlxG.width / 2) - 4, 12);
+		}
+
+		if (totalFuel == 0) {
+			exit.exists = true;
 		}
 
 	}
@@ -79,10 +88,15 @@ class PlayState extends FlxState
 		FlxControl.clear();
 	}
 
-	public function hitSpikes(Player:FlxObject,spikesFlxTilemap):Void
+	public function hitSpikes(Player:FlxObject,spikes:FlxObject):Void
 	{
-		FlxG.resetState();
-		FlxControl.clear();
+		Player.reset((FlxG.width / 2) - 4, 12);
+	}
+
+	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
+	{
+		fuel.kill();
+		totalFuel --;
 	}
 
 	private function parseSpikes():Void
@@ -100,6 +114,27 @@ class PlayState extends FlxState
 				if (spikeMap.getTile(tx,ty) == 1)
 				{
 					spikes.add(new Spike(tx,ty));
+				}
+			}
+		}
+	}
+
+	private function parseFuel():Void
+	{
+		var fuelMap:FlxTilemap = new FlxTilemap();
+
+		fuelMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map3.csv"), "assets/fuel.png", 16, 16);
+
+		fuelGroup = new FlxGroup();
+
+		for (ty in 0...fuelMap.heightInTiles)
+		{
+			for (tx in 0...fuelMap.widthInTiles)
+			{
+				if (fuelMap.getTile(tx,ty) == 1)
+				{
+					fuelGroup.add(new Fuel(tx,ty));
+					totalFuel ++;
 				}
 			}
 		}

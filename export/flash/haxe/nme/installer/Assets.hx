@@ -115,6 +115,10 @@ class Assets {
 			resourceTypes.set ("assets/data/vcr/stop.png", "image");
 			resourceClasses.set ("assets/data/vis/bounds.png", NME_assets_data_vis_bounds_png);
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
+			resourceClasses.set ("assets/fuel.png", NME_assets_fuel_png);
+			resourceTypes.set ("assets/fuel.png", "image");
+			resourceClasses.set ("assets/fuel_tiles.png", NME_assets_fuel_tiles_png);
+			resourceTypes.set ("assets/fuel_tiles.png", "image");
 			resourceClasses.set ("assets/HaxeFlixel.svg", NME_assets_haxeflixel_svg);
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
 			resourceClasses.set ("assets/level1.dam", NME_assets_level1_dam);
@@ -129,6 +133,8 @@ class Assets {
 			resourceTypes.set ("assets/mapCSV_Group1_Map1.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Group1_Map2.csv", NME_assets_mapcsv_group1_map2_csv);
 			resourceTypes.set ("assets/mapCSV_Group1_Map2.csv", "text");
+			resourceClasses.set ("assets/mapCSV_Group1_Map3.csv", NME_assets_mapcsv_group1_map3_csv);
+			resourceTypes.set ("assets/mapCSV_Group1_Map3.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Level1_Map.csv", NME_assets_mapcsv_level1_map_csv);
 			resourceTypes.set ("assets/mapCSV_Level1_Map.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Level1_Sky.csv", NME_assets_mapcsv_level1_sky_csv);
