@@ -3,6 +3,7 @@ package nme.installer;
 
 import format.display.MovieClip;
 import haxe.Unserializer;
+import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.media.Sound;
 import nme.net.URLRequest;
@@ -10,8 +11,8 @@ import nme.text.Font;
 import nme.utils.ByteArray;
 import ApplicationMain;
 
-#if swf
-import format.SWF;
+#if swfdev
+import format.swf.lite.SWFLite;
 #end
 
 #if xfl
@@ -25,15 +26,16 @@ import format.XFL;
  */
 
 class Assets {
-
+	
 	
 	public static var cachedBitmapData:Hash<BitmapData> = new Hash<BitmapData>();
-	#if swf private static var cachedSWFLibraries:Hash <SWF> = new Hash <SWF> (); #end
+	#if swfdev private static var cachedSWFLibraries:Hash <SWFLite> = new Hash <SWFLite> (); #end
 	#if xfl private static var cachedXFLLibraries:Hash <XFL> = new Hash <XFL> (); #end
 	
 	private static var initialized:Bool = false;
 	private static var libraryTypes:Hash <String> = new Hash <String> ();
 	private static var resourceClasses:Hash <Dynamic> = new Hash <Dynamic> ();
+	private static var resourceNames:Hash <String> = new Hash <String> ();
 	private static var resourceTypes:Hash <String> = new Hash <String> ();
 	
 	
@@ -41,108 +43,194 @@ class Assets {
 		
 		if (!initialized) {
 			
-			resourceClasses.set ("Beep", NME_assets_data_beep_mp3);
-			resourceTypes.set ("Beep", "sound");
-			resourceClasses.set ("assets/bullet.png", NME_assets_bullet_png);
+			
+			
+			resourceNames.set ("assets/bullet.png", "assets/bullet.png");
 			resourceTypes.set ("assets/bullet.png", "image");
-			resourceClasses.set ("assets/data/autotiles.png", NME_assets_data_autotiles_png);
+			
+			
+			resourceNames.set ("assets/data/autotiles.png", "assets/data/autotiles.png");
 			resourceTypes.set ("assets/data/autotiles.png", "image");
-			resourceClasses.set ("assets/data/autotiles_alt.png", NME_assets_data_autotiles_alt_png);
+			
+			
+			resourceNames.set ("assets/data/autotiles_alt.png", "assets/data/autotiles_alt.png");
 			resourceTypes.set ("assets/data/autotiles_alt.png", "image");
-			resourceClasses.set ("assets/data/base.png", NME_assets_data_base_png);
+			
+			
+			resourceNames.set ("assets/data/base.png", "assets/data/base.png");
 			resourceTypes.set ("assets/data/base.png", "image");
-			resourceClasses.set ("assets/data/beep.mp3", NME_assets_data_beep_mp4);
+			
+			
+			resourceNames.set ("assets/data/beep.mp3", "assets/data/beep.mp3");
 			resourceTypes.set ("assets/data/beep.mp3", "music");
-			resourceClasses.set ("assets/data/button.png", NME_assets_data_button_png);
+			
+			
+			resourceNames.set ("assets/data/beep.wav", "assets/data/beep.wav");
+			resourceTypes.set ("assets/data/beep.wav", "sound");
+			
+			
+			resourceNames.set ("assets/data/button.png", "assets/data/button.png");
 			resourceTypes.set ("assets/data/button.png", "image");
-			resourceClasses.set ("assets/data/button_a.png", NME_assets_data_button_a_png);
+			
+			
+			resourceNames.set ("assets/data/button_a.png", "assets/data/button_a.png");
 			resourceTypes.set ("assets/data/button_a.png", "image");
-			resourceClasses.set ("assets/data/button_b.png", NME_assets_data_button_b_png);
+			
+			
+			resourceNames.set ("assets/data/button_b.png", "assets/data/button_b.png");
 			resourceTypes.set ("assets/data/button_b.png", "image");
-			resourceClasses.set ("assets/data/button_c.png", NME_assets_data_button_c_png);
+			
+			
+			resourceNames.set ("assets/data/button_c.png", "assets/data/button_c.png");
 			resourceTypes.set ("assets/data/button_c.png", "image");
-			resourceClasses.set ("assets/data/button_down.png", NME_assets_data_button_down_png);
+			
+			
+			resourceNames.set ("assets/data/button_down.png", "assets/data/button_down.png");
 			resourceTypes.set ("assets/data/button_down.png", "image");
-			resourceClasses.set ("assets/data/button_left.png", NME_assets_data_button_left_png);
+			
+			
+			resourceNames.set ("assets/data/button_left.png", "assets/data/button_left.png");
 			resourceTypes.set ("assets/data/button_left.png", "image");
-			resourceClasses.set ("assets/data/button_right.png", NME_assets_data_button_right_png);
+			
+			
+			resourceNames.set ("assets/data/button_right.png", "assets/data/button_right.png");
 			resourceTypes.set ("assets/data/button_right.png", "image");
-			resourceClasses.set ("assets/data/button_up.png", NME_assets_data_button_up_png);
+			
+			
+			resourceNames.set ("assets/data/button_up.png", "assets/data/button_up.png");
 			resourceTypes.set ("assets/data/button_up.png", "image");
-			resourceClasses.set ("assets/data/button_x.png", NME_assets_data_button_x_png);
+			
+			
+			resourceNames.set ("assets/data/button_x.png", "assets/data/button_x.png");
 			resourceTypes.set ("assets/data/button_x.png", "image");
-			resourceClasses.set ("assets/data/button_y.png", NME_assets_data_button_y_png);
+			
+			
+			resourceNames.set ("assets/data/button_y.png", "assets/data/button_y.png");
 			resourceTypes.set ("assets/data/button_y.png", "image");
+			
 			resourceClasses.set ("assets/data/courier.ttf", NME_assets_data_courier_ttf);
+			resourceNames.set ("assets/data/courier.ttf", "assets/data/courier.ttf");
 			resourceTypes.set ("assets/data/courier.ttf", "font");
-			resourceClasses.set ("assets/data/cursor.png", NME_assets_data_cursor_png);
+			
+			
+			resourceNames.set ("assets/data/cursor.png", "assets/data/cursor.png");
 			resourceTypes.set ("assets/data/cursor.png", "image");
-			resourceClasses.set ("assets/data/default.png", NME_assets_data_default_png);
+			
+			
+			resourceNames.set ("assets/data/default.png", "assets/data/default.png");
 			resourceTypes.set ("assets/data/default.png", "image");
-			resourceClasses.set ("assets/data/fontData10pt.png", NME_assets_data_fontdata10pt_png);
+			
+			
+			resourceNames.set ("assets/data/fontData10pt.png", "assets/data/fontData10pt.png");
 			resourceTypes.set ("assets/data/fontData10pt.png", "image");
-			resourceClasses.set ("assets/data/fontData11pt.png", NME_assets_data_fontdata11pt_png);
+			
+			
+			resourceNames.set ("assets/data/fontData11pt.png", "assets/data/fontData11pt.png");
 			resourceTypes.set ("assets/data/fontData11pt.png", "image");
-			resourceClasses.set ("assets/data/handle.png", NME_assets_data_handle_png);
+			
+			
+			resourceNames.set ("assets/data/handle.png", "assets/data/handle.png");
 			resourceTypes.set ("assets/data/handle.png", "image");
-			resourceClasses.set ("assets/data/logo.png", NME_assets_data_logo_png);
+			
+			
+			resourceNames.set ("assets/data/logo.png", "assets/data/logo.png");
 			resourceTypes.set ("assets/data/logo.png", "image");
-			resourceClasses.set ("assets/data/logo_corners.png", NME_assets_data_logo_corners_png);
+			
+			
+			resourceNames.set ("assets/data/logo_corners.png", "assets/data/logo_corners.png");
 			resourceTypes.set ("assets/data/logo_corners.png", "image");
-			resourceClasses.set ("assets/data/logo_light.png", NME_assets_data_logo_light_png);
+			
+			
+			resourceNames.set ("assets/data/logo_light.png", "assets/data/logo_light.png");
 			resourceTypes.set ("assets/data/logo_light.png", "image");
+			
 			resourceClasses.set ("assets/data/nokiafc22.ttf", NME_assets_data_nokiafc22_ttf);
+			resourceNames.set ("assets/data/nokiafc22.ttf", "assets/data/nokiafc22.ttf");
 			resourceTypes.set ("assets/data/nokiafc22.ttf", "font");
-			resourceClasses.set ("assets/data/stick.png", NME_assets_data_stick_png);
+			
+			
+			resourceNames.set ("assets/data/stick.png", "assets/data/stick.png");
 			resourceTypes.set ("assets/data/stick.png", "image");
-			resourceClasses.set ("assets/data/vcr/flixel.png", NME_assets_data_vcr_flixel_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/flixel.png", "assets/data/vcr/flixel.png");
 			resourceTypes.set ("assets/data/vcr/flixel.png", "image");
-			resourceClasses.set ("assets/data/vcr/open.png", NME_assets_data_vcr_open_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/open.png", "assets/data/vcr/open.png");
 			resourceTypes.set ("assets/data/vcr/open.png", "image");
-			resourceClasses.set ("assets/data/vcr/pause.png", NME_assets_data_vcr_pause_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/pause.png", "assets/data/vcr/pause.png");
 			resourceTypes.set ("assets/data/vcr/pause.png", "image");
-			resourceClasses.set ("assets/data/vcr/play.png", NME_assets_data_vcr_play_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/play.png", "assets/data/vcr/play.png");
 			resourceTypes.set ("assets/data/vcr/play.png", "image");
-			resourceClasses.set ("assets/data/vcr/record_off.png", NME_assets_data_vcr_record_off_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/record_off.png", "assets/data/vcr/record_off.png");
 			resourceTypes.set ("assets/data/vcr/record_off.png", "image");
-			resourceClasses.set ("assets/data/vcr/record_on.png", NME_assets_data_vcr_record_on_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/record_on.png", "assets/data/vcr/record_on.png");
 			resourceTypes.set ("assets/data/vcr/record_on.png", "image");
-			resourceClasses.set ("assets/data/vcr/restart.png", NME_assets_data_vcr_restart_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/restart.png", "assets/data/vcr/restart.png");
 			resourceTypes.set ("assets/data/vcr/restart.png", "image");
-			resourceClasses.set ("assets/data/vcr/step.png", NME_assets_data_vcr_step_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/step.png", "assets/data/vcr/step.png");
 			resourceTypes.set ("assets/data/vcr/step.png", "image");
-			resourceClasses.set ("assets/data/vcr/stop.png", NME_assets_data_vcr_stop_png);
+			
+			
+			resourceNames.set ("assets/data/vcr/stop.png", "assets/data/vcr/stop.png");
 			resourceTypes.set ("assets/data/vcr/stop.png", "image");
-			resourceClasses.set ("assets/data/vis/bounds.png", NME_assets_data_vis_bounds_png);
+			
+			
+			resourceNames.set ("assets/data/vis/bounds.png", "assets/data/vis/bounds.png");
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
-			resourceClasses.set ("assets/HaxeFlixel.svg", NME_assets_haxeflixel_svg);
+			
+			
+			resourceNames.set ("assets/HaxeFlixel.svg", "assets/HaxeFlixel.svg");
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
-			resourceClasses.set ("assets/level1.dam", NME_assets_level1_dam);
+			
+			
+			resourceNames.set ("assets/level1.dam", "assets/level1.dam");
 			resourceTypes.set ("assets/level1.dam", "text");
-			resourceClasses.set ("assets/level1.dam.bak", NME_assets_level1_dam_bak);
+			
+			
+			resourceNames.set ("assets/level1.dam.bak", "assets/level1.dam.bak");
 			resourceTypes.set ("assets/level1.dam.bak", "text");
-			resourceClasses.set ("assets/level1.txt", NME_assets_level1_txt);
+			
+			
+			resourceNames.set ("assets/level1.txt", "assets/level1.txt");
 			resourceTypes.set ("assets/level1.txt", "text");
-			resourceClasses.set ("assets/level1_tileset.tmx", NME_assets_level1_tileset_tmx);
+			
+			
+			resourceNames.set ("assets/level1_tileset.tmx", "assets/level1_tileset.tmx");
 			resourceTypes.set ("assets/level1_tileset.tmx", "text");
-			resourceClasses.set ("assets/mapCSV_Group1_Map1.csv", NME_assets_mapcsv_group1_map1_csv);
+			
+			
+			resourceNames.set ("assets/mapCSV_Group1_Map1.csv", "assets/mapCSV_Group1_Map1.csv");
 			resourceTypes.set ("assets/mapCSV_Group1_Map1.csv", "text");
-			resourceClasses.set ("assets/mapCSV_Group1_Map2.csv", NME_assets_mapcsv_group1_map2_csv);
-			resourceTypes.set ("assets/mapCSV_Group1_Map2.csv", "text");
-			resourceClasses.set ("assets/mapCSV_Level1_Map.csv", NME_assets_mapcsv_level1_map_csv);
+			
+			
+			resourceNames.set ("assets/mapCSV_Level1_Map.csv", "assets/mapCSV_Level1_Map.csv");
 			resourceTypes.set ("assets/mapCSV_Level1_Map.csv", "text");
-			resourceClasses.set ("assets/mapCSV_Level1_Sky.csv", NME_assets_mapcsv_level1_sky_csv);
+			
+			
+			resourceNames.set ("assets/mapCSV_Level1_Sky.csv", "assets/mapCSV_Level1_Sky.csv");
 			resourceTypes.set ("assets/mapCSV_Level1_Sky.csv", "text");
-			resourceClasses.set ("assets/mapCSV_Level1_Stars.csv", NME_assets_mapcsv_level1_stars_csv);
+			
+			
+			resourceNames.set ("assets/mapCSV_Level1_Stars.csv", "assets/mapCSV_Level1_Stars.csv");
 			resourceTypes.set ("assets/mapCSV_Level1_Stars.csv", "text");
-			resourceClasses.set ("assets/spike.png", NME_assets_spike_png);
-			resourceTypes.set ("assets/spike.png", "image");
-			resourceClasses.set ("assets/spikes.png", NME_assets_spikes_png);
-			resourceTypes.set ("assets/spikes.png", "image");
-			resourceClasses.set ("assets/tiles.png", NME_assets_tiles_png);
+			
+			
+			resourceNames.set ("assets/tiles.png", "assets/tiles.png");
 			resourceTypes.set ("assets/tiles.png", "image");
-			resourceClasses.set ("assets/tiles.png.bak", NME_assets_tiles_png_bak);
-			resourceTypes.set ("assets/tiles.png.bak", "binary");
 			
 			
 			initialized = true;
@@ -156,7 +244,7 @@ class Assets {
 		
 		initialize ();
 		
-		if (resourceTypes.exists (id) && resourceTypes.get (id).toLowerCase () == "image") {
+		if (resourceNames.exists(id) && resourceTypes.exists (id) && resourceTypes.get (id).toLowerCase () == "image") {
 			
 			if (useCache && cachedBitmapData.exists (id)) {
 				
@@ -164,7 +252,10 @@ class Assets {
 				
 			} else {
 				
-				var data = cast (Type.createInstance (resourceClasses.get (id), []), BitmapData);
+				// Should be bitmapData.clone (), but stopped working in recent Jeash builds
+				// Without clone, BitmapData is already cached, so ignoring the hash table for now
+				
+				var data = cast (ApplicationMain.loaders.get (resourceNames.get(id)).contentLoaderInfo.content, Bitmap).bitmapData;
 				
 				if (useCache) {
 					
@@ -176,20 +267,22 @@ class Assets {
 				
 			}
 			
-		} else if (id.indexOf (":") > -1) {
+		}  else if (id.indexOf (":") > -1) {
 			
 			var libraryName = id.substr (0, id.indexOf (":"));
 			var symbolName = id.substr (id.indexOf (":") + 1);
 			
 			if (libraryTypes.exists (libraryName)) {
 				
-				#if swf
+				#if swfdev
 				
 				if (libraryTypes.get (libraryName) == "swf") {
 					
 					if (!cachedSWFLibraries.exists (libraryName)) {
 						
-						cachedSWFLibraries.set (libraryName, new SWF (getBytes ("libraries/" + libraryName + ".swf")));
+						var unserializer = new Unserializer (getText ("libraries/" + libraryName + ".dat"));
+						unserializer.setResolver (cast { resolveEnum: resolveEnum, resolveClass: resolveClass });
+						cachedSWFLibraries.set (libraryName, unserializer.unserialize());
 						
 					}
 					
@@ -236,17 +329,15 @@ class Assets {
 		
 		initialize ();
 		
-		if (resourceClasses.exists (id)) {
+		if (resourceNames.exists (id)) {
 			
-			return Type.createInstance (resourceClasses.get (id), []);
-			
-		} else {
-			
-			trace ("[nme.Assets] There is no ByteArray asset with an ID of \"" + id + "\"");
-			
-			return null;
+			return cast ApplicationMain.urlLoaders.get (getResourceName(id)).data;
 			
 		}
+		
+		trace ("[nme.Assets] There is no String or ByteArray asset with an ID of \"" + id + "\"");
+		
+		return null;
 		
 	}
 	
@@ -255,17 +346,19 @@ class Assets {
 		
 		initialize ();
 		
-		if (resourceTypes.exists (id) && resourceTypes.get (id).toLowerCase () == "font") {
+		if (resourceNames.exists(id) && resourceTypes.exists (id)) {
 			
-			return cast (Type.createInstance (resourceClasses.get (id), []), Font);
-			
-		} else {
-			
-			trace ("[nme.Assets] There is no Font asset with an ID of \"" + id + "\"");
-			
-			return null;
+			if (resourceTypes.get (id).toLowerCase () == "font") {
+				
+				return cast (Type.createInstance (resourceClasses.get (id), []), Font);
+				
+			}
 			
 		}
+		
+		trace ("[nme.Assets] There is no Font asset with an ID of \"" + id + "\"");
+		
+		return null;
 		
 	}
 	
@@ -279,13 +372,15 @@ class Assets {
 		
 		if (libraryTypes.exists (libraryName)) {
 			
-			#if swf
+			#if swfdev
 			
 			if (libraryTypes.get (libraryName) == "swf") {
 				
 				if (!cachedSWFLibraries.exists (libraryName)) {
 					
-					cachedSWFLibraries.set (libraryName, new SWF (getBytes ("libraries/" + libraryName + ".swf")));
+					var unserializer = new Unserializer (getText ("libraries/" + libraryName + ".dat"));
+					unserializer.setResolver (cast { resolveEnum: resolveEnum, resolveClass: resolveClass });
+					cachedSWFLibraries.set (libraryName, unserializer.unserialize());
 					
 				}
 				
@@ -322,15 +417,28 @@ class Assets {
 	}
 	
 	
+	public static function getResourceName (id:String):String {
+		
+		initialize ();
+		
+		return resourceNames.get (id);
+		
+	}
+	
+	
 	public static function getSound (id:String):Sound {
 		
 		initialize ();
 		
-		if (resourceTypes.exists (id)) {
+		if (resourceNames.exists(id) && resourceTypes.exists (id)) {
 			
-			if (resourceTypes.get (id).toLowerCase () == "sound" || resourceTypes.get (id).toLowerCase () == "music") {
+			if (resourceTypes.get (id).toLowerCase () == "sound") {
 				
-				return cast (Type.createInstance (resourceClasses.get (id), []), Sound);
+				return new Sound (new URLRequest (resourceNames.get(id)));
+				
+			} else if (resourceTypes.get (id).toLowerCase () == "music") {
+				
+				return new Sound (new URLRequest (resourceNames.get(id)));
 				
 			}
 			
@@ -345,17 +453,20 @@ class Assets {
 	
 	public static function getText (id:String):String {
 		
-		var bytes = getBytes (id);
+		initialize ();
 		
-		if (bytes == null) {
+		if (resourceNames.exists(id) && resourceTypes.exists (id)) {
 			
-			return null;
-			
-		} else {
-			
-			return bytes.readUTFBytes (bytes.length);
+			if (resourceTypes.get (id).toLowerCase () == "text") {
+				
+				return ApplicationMain.urlLoaders.get (resourceNames.get(id)).data;
+				
+			}
 			
 		}
+		
+		var bytes = getBytes (id);
+		return null;
 		
 	}
 	
@@ -376,6 +487,22 @@ class Assets {
 	//{
 		//return null;
 	//}
+	
+	
+	private static function resolveClass (name:String):Class <Dynamic> {
+		
+		name = StringTools.replace (name, "native.", "browser.");
+		return Type.resolveClass (name);
+		
+	}
+	
+	
+	private static function resolveEnum (name:String):Enum <Dynamic> {
+		
+		name = StringTools.replace (name, "native.", "browser.");
+		return Type.resolveEnum (name);
+		
+	}
 	
 	
 }

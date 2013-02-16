@@ -5,8 +5,6 @@ import nme.geom.Rectangle;
 import nme.net.SharedObject;
 import org.flixel.FlxButton;
 import org.flixel.FlxG;
-import org.flixel.FlxPath;
-import org.flixel.FlxSave;
 import org.flixel.FlxSprite;
 import org.flixel.FlxRect;
 import org.flixel.FlxState;
@@ -16,56 +14,41 @@ import org.flixel.FlxTilemap;
 import org.flixel.FlxObject;
 import org.flixel.FlxGroup;
 import org.flixel.FlxParticle;
-import addons.FlxEmitterExt;
-import org.flixel.FlxEmitter;
 import org.flixel.FlxTimer;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
-import org.flixel.plugin.photonstorm.FlxWeapon;
 
 class PlayState extends FlxState
 {
 
 	public var level:FlxTilemap;
+	public var spikes:FlxGroup;
 	public var player:Player;
 	public var exit:FlxSprite;
-	public var lazer:FlxWeapon;
-	private var emitterGroup:FlxGroup;
 
 	override public function create():Void
 	{
 
 		FlxG.mouse.show();
 
-		#if !neko
-		FlxG.bgColor = 0xff000000;
-		#else
-		FlxG.camera.bgColor = {rgb: 0x131c1b, a: 0xff};
-		#end
-
+		FlxG.bgColor = 0xffcccccc;
 
 		level = new FlxTilemap();
 		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/tiles.png");
-		add(level);
-
-		exit = new FlxSprite(35*8+1,25*8);
-		exit.makeGraphic(14,16,0xff3f3f3f);
-		add(exit);
 
 		// Create Player
 		player = new Player();
+
+		// Create the Exit
+		exit = new FlxSprite(FlxG.width - 30,FlxG.height - 23);
+		exit.makeGraphic(15,15,0xff666666);
+
+		parseSpikes();
+
+		add(level);
+		add(spikes);
+		add(exit);
 		add(player);
-
-		lazer = new FlxWeapon("lazer",player, "x", "y");
-		lazer.makeImageBullet(15, "assets/bullet.png");
-		lazer.setFireRate(100);
-		lazer.setBulletSpeed(100);
-		lazer.setBulletElasticity(0);
-		lazer.setBulletLifeSpan(1000);
-		add(lazer.group);
-
-		emitterGroup = new FlxGroup();
-		add(emitterGroup);
 
 	}
 
@@ -79,8 +62,7 @@ class PlayState extends FlxState
 		super.update();
 
 		FlxG.collide(player,level);
-		FlxG.collide(lazer.group,level,bulletHitLevel);
-		FlxG.collide(emitterGroup,level);
+		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,exit,changeLevel);
 
 		if (player.y > FlxG.height)
@@ -89,10 +71,6 @@ class PlayState extends FlxState
 			FlxControl.clear();
 		}
 
-		if(FlxG.mouse.justPressed())
-		{
-			lazer.fireAtMouse();
-		}
 	}
 
 	public function changeLevel(Player:FlxObject,Exit:FlxObject):Void
@@ -101,11 +79,30 @@ class PlayState extends FlxState
 		FlxControl.clear();
 	}
 
-	public function bulletHitLevel(bulletRef:FlxObject,levelRef:FlxObject):Void {
-		bulletRef.exists = false;
-		var emitter:FlxEmitter = new Sparks(bulletRef.x,bulletRef.y);
-		emitterGroup.add(emitter);
-		emitter.start(true,2,0,0);
+	public function hitSpikes(Player:FlxObject,spikesFlxTilemap):Void
+	{
+		FlxG.resetState();
+		FlxControl.clear();
+	}
+
+	private function parseSpikes():Void
+	{
+		var spikeMap:FlxTilemap = new FlxTilemap();
+
+		spikeMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map2.csv"), "assets/spikes.png", 16, 16);
+
+		spikes = new FlxGroup();
+
+		for (ty in 0...spikeMap.heightInTiles)
+		{
+			for (tx in 0...spikeMap.widthInTiles)
+			{
+				if (spikeMap.getTile(tx,ty) == 1)
+				{
+					spikes.add(new Spike(tx,ty));
+				}
+			}
+		}
 	}
 
 }

@@ -312,9 +312,44 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mapCSV_Group1_Map1.csv");
          
 		
+		if (inName=="assets/mapCSV_Group1_Map2.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_Map2.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level1_Map.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level1_Map.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level1_Sky.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level1_Sky.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level1_Stars.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level1_Stars.csv");
+         
+		
+		if (inName=="assets/spike.png")
+			 
+            return Assets.getBitmapData ("assets/spike.png");
+         
+		
+		if (inName=="assets/spikes.png")
+			 
+            return Assets.getBitmapData ("assets/spikes.png");
+         
+		
 		if (inName=="assets/tiles.png")
 			 
             return Assets.getBitmapData ("assets/tiles.png");
+         
+		
+		if (inName=="assets/tiles.png.bak")
+			 
+            return Assets.getBytes ("assets/tiles.png.bak");
          
 		
 		
@@ -379,7 +414,14 @@ class NME_assets_level1_dam_bak extends nme.utils.ByteArray { }
 class NME_assets_level1_txt extends nme.utils.ByteArray { }
 class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map2_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level1_map_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level1_sky_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level1_stars_csv extends nme.utils.ByteArray { }
+class NME_assets_spike_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_spikes_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_tiles_png_bak extends nme.utils.ByteArray { }
 
 
 #else
