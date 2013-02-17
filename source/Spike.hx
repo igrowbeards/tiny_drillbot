@@ -8,6 +8,7 @@ class Spike extends FlxSprite
 	{
 		super(X * 8, Y * 8, "assets/spike.png");
 		solid = true;
+		immovable = true;
 	}
 }
 

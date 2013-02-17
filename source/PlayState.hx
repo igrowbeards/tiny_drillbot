@@ -15,6 +15,7 @@ import org.flixel.FlxObject;
 import org.flixel.FlxGroup;
 import org.flixel.FlxParticle;
 import org.flixel.FlxTimer;
+import org.flixel.FlxCamera;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
 
@@ -27,33 +28,55 @@ class PlayState extends FlxState
 	public var player:Player;
 	public var exit:FlxSprite;
 	public var totalFuel:Int;
+	public var goombas:Goombas;
+	public var fuelCollected:FlxText;
+	public var maxFuel:Int;
 
 	override public function create():Void
 	{
 
-		FlxG.mouse.show();
-
 		FlxG.bgColor = 0xff888888;
 
+
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/tiles.png");
+		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),FlxTilemap.imgAuto, 0, 0, FlxTilemap.AUTO);
+		Registry.level = level;
+		Registry.player = player;
 
 		// Create Player
 		player = new Player();
 
+		goombas = new Goombas();
+
+
+
 		// Create the Exit
-		exit = new FlxSprite(FlxG.width - 30,FlxG.height - 23);
+		exit = new FlxSprite(level.width - 30,level.height - 23);
 		exit.makeGraphic(15,15,0xff666666);
 		exit.exists = false;
 
 		parseSpikes();
 		parseFuel();
+		parseEnemies();
+
+		FlxG.worldBounds = new FlxRect(0,0,Std.int(level.width),Std.int(level.height));
+		FlxG.camera.setBounds(0,0,Std.int(level.width),Std.int(level.height));
+		FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
+
+		maxFuel = totalFuel;
+
+		fuelCollected = new FlxText(0,0,100);
+		fuelCollected.text = "0 /" + maxFuel;
+		fuelCollected.scrollFactor.x = 0;
+		fuelCollected.scrollFactor.y = 0;
 
 		add(level);
 		add(spikes);
 		add(fuelGroup);
 		add(exit);
 		add(player);
+		add(goombas);
+		add(fuelCollected);
 
 	}
 
@@ -67,11 +90,14 @@ class PlayState extends FlxState
 		super.update();
 
 		FlxG.collide(player,level);
+		FlxG.collide(goombas,level);
+		FlxG.collide(goombas,spikes);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,changeLevel);
+		FlxG.collide(player,goombas,hitEnemy);
 
-		if (player.y > FlxG.height)
+		if (player.y > level.height)
 		{
 			player.reset((FlxG.width / 2) - 4, 12);
 		}
@@ -86,18 +112,36 @@ class PlayState extends FlxState
 	{
 		FlxG.resetState();
 		FlxControl.clear();
+		FlxG.score = 0;
 	}
 
 	public function hitSpikes(Player:FlxObject,spikes:FlxObject):Void
 	{
-		Player.reset((FlxG.width / 2) - 4, 12);
+		player.reset((FlxG.width / 2) - 4, 12);
 	}
 
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
 	{
 		fuel.kill();
 		totalFuel --;
+		FlxG.score ++;
+		fuelCollected.text = FlxG.score + "/" + maxFuel;
 	}
+
+	public function hitEnemy(playerRef:FlxObject,enemyRef:FlxObject):Void
+	{
+		if(playerRef.justTouched(FlxObject.DOWN))
+		{
+			enemyRef.kill();
+			player.velocity.y = -50;
+			player.acceleration.y = -50;
+		}
+		else
+		{
+			player.reset((FlxG.width / 2) - 4, 12);
+		}
+	}
+
 
 	private function parseSpikes():Void
 	{
@@ -135,6 +179,24 @@ class PlayState extends FlxState
 				{
 					fuelGroup.add(new Fuel(tx,ty));
 					totalFuel ++;
+				}
+			}
+		}
+	}
+
+	private function parseEnemies():Void
+	{
+		var enemyMap:FlxTilemap = new FlxTilemap();
+
+		enemyMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map4.csv"), "assets/fuel.png", 16, 16);
+
+		for (ty in 0...enemyMap.heightInTiles)
+		{
+			for (tx in 0...enemyMap.widthInTiles)
+			{
+				if (enemyMap.getTile(tx,ty) == 1)
+				{
+					goombas.addGoomba(tx,ty);
 				}
 			}
 		}

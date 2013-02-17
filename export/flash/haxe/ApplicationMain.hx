@@ -292,6 +292,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/fuel_tiles.png");
          
 		
+		if (inName=="assets/goomba_tiles.png")
+			 
+            return Assets.getBitmapData ("assets/goomba_tiles.png");
+         
+		
 		if (inName=="assets/HaxeFlixel.svg")
 			 
 			 return Assets.getText ("assets/HaxeFlixel.svg");
@@ -330,6 +335,11 @@ class ApplicationMain {
 		if (inName=="assets/mapCSV_Group1_Map3.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Group1_Map3.csv");
+         
+		
+		if (inName=="assets/mapCSV_Group1_Map4.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_Map4.csv");
          
 		
 		if (inName=="assets/mapCSV_Level1_Map.csv")
@@ -425,6 +435,7 @@ class NME_assets_data_vcr_stop_png extends nme.display.BitmapData { public funct
 class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_goomba_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_haxeflixel_svg extends nme.utils.ByteArray { }
 class NME_assets_level1_dam extends nme.utils.ByteArray { }
 class NME_assets_level1_dam_bak extends nme.utils.ByteArray { }
@@ -433,6 +444,7 @@ class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map2_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map3_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map4_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_sky_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_stars_csv extends nme.utils.ByteArray { }
