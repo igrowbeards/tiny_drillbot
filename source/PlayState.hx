@@ -31,6 +31,7 @@ class PlayState extends FlxState
 	public var goombas:Goombas;
 	public var fuelCollected:FlxText;
 	public var maxFuel:Int;
+	public var elevators:FlxGroup;
 
 	override public function create():Void
 	{
@@ -49,11 +50,18 @@ class PlayState extends FlxState
 		goombas = new Goombas();
 
 
+		elevators = new FlxGroup();
+
+		var ele1:Elevator = new Elevator(1,4,0,24,60);
+		var ele2:Elevator = new Elevator(37,3,0,25,60);
+		elevators.add(ele1);
+		elevators.add(ele2);
+
 
 		// Create the Exit
-		exit = new FlxSprite(level.width - 30,level.height - 23);
-		exit.makeGraphic(15,15,0xff666666);
-		exit.exists = false;
+		exit = new FlxSprite(35 * 8,26 * 8);
+		exit.makeGraphic(16,16,0xff666666);
+		//exit.exists = false;
 
 		parseSpikes();
 		parseFuel();
@@ -77,6 +85,7 @@ class PlayState extends FlxState
 		add(player);
 		add(goombas);
 		add(fuelCollected);
+		add(elevators);
 
 	}
 
@@ -90,6 +99,7 @@ class PlayState extends FlxState
 		super.update();
 
 		FlxG.collide(player,level);
+		FlxG.collide(player,elevators);
 		FlxG.collide(goombas,level);
 		FlxG.collide(goombas,spikes);
 		FlxG.overlap(player,spikes,hitSpikes);

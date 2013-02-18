@@ -31,7 +31,7 @@ class Player extends FlxSprite
 		// All speeds are in pixels per second, the follow lets the player run left/right
 		FlxControl.player1.setMovementSpeed(400, 0, 50, 200, 400, 0);
 		//	And SPACE BAR will make them jump up to a maximum of 200 pixels (per second), only when touching the FLOOR
-		FlxControl.player1.setJumpButton("UP", FlxControlHandler.KEYMODE_JUST_DOWN, 120, FlxObject.FLOOR, 250, 200);
+		//FlxControl.player1.setJumpButton("UP", FlxControlHandler.KEYMODE_JUST_DOWN, 120, FlxObject.FLOOR, 250, 200);
 
 	}
 
