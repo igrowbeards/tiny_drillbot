@@ -60,4 +60,10 @@ class Player extends FlxSprite
 		}
 	}
 
+	public function hitSpring(player:FlxObject,spring:FlxObject):Void
+	{
+		velocity.y = -150;
+		acceleration.y = -150;
+	}
+
 }

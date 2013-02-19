@@ -352,6 +352,16 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mapCSV_Group1_Map4.csv");
          
 		
+		if (inName=="assets/mapCSV_Group1_Map5.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_Map5.csv");
+         
+		
+		if (inName=="assets/mapCSV_Group1_Map6.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_Map6.csv");
+         
+		
 		if (inName=="assets/mapCSV_Level1_Map.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Level1_Map.csv");
@@ -375,6 +385,16 @@ class ApplicationMain {
 		if (inName=="assets/spikes.png")
 			 
             return Assets.getBitmapData ("assets/spikes.png");
+         
+		
+		if (inName=="assets/spring.png")
+			 
+            return Assets.getBitmapData ("assets/spring.png");
+         
+		
+		if (inName=="assets/spring_tile.png")
+			 
+            return Assets.getBitmapData ("assets/spring_tile.png");
          
 		
 		if (inName=="assets/tiles.png")
@@ -457,11 +477,15 @@ class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map2_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map3_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map4_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map5_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map6_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_sky_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_stars_csv extends nme.utils.ByteArray { }
 class NME_assets_spike_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spikes_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_spring_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_spring_tile_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png_bak extends nme.utils.ByteArray { }
 

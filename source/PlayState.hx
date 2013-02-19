@@ -32,6 +32,7 @@ class PlayState extends FlxState
 	public var fuelCollected:FlxText;
 	public var maxFuel:Int;
 	public var elevators:FlxGroup;
+	public var springs:FlxGroup;
 
 	override public function create():Void
 	{
@@ -51,6 +52,7 @@ class PlayState extends FlxState
 
 
 		elevators = new FlxGroup();
+		springs = new FlxGroup();
 
 		var ele1:Elevator = new Elevator(1,4,0,24,60);
 		var ele2:Elevator = new Elevator(37,3,0,25,60);
@@ -66,6 +68,7 @@ class PlayState extends FlxState
 		parseSpikes();
 		parseFuel();
 		parseEnemies();
+		parseSprings();
 
 		FlxG.worldBounds = new FlxRect(0,0,Std.int(level.width),Std.int(level.height));
 		FlxG.camera.setBounds(0,0,Std.int(level.width),Std.int(level.height));
@@ -86,6 +89,7 @@ class PlayState extends FlxState
 		add(goombas);
 		add(fuelCollected);
 		add(elevators);
+		add(springs);
 
 	}
 
@@ -106,6 +110,7 @@ class PlayState extends FlxState
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,changeLevel);
 		FlxG.collide(player,goombas,hitEnemy);
+		FlxG.collide(player,springs,player.hitSpring);
 
 		if (player.y > level.height)
 		{
@@ -207,6 +212,24 @@ class PlayState extends FlxState
 				if (enemyMap.getTile(tx,ty) == 1)
 				{
 					goombas.addGoomba(tx,ty);
+				}
+			}
+		}
+	}
+
+	private function parseSprings():Void
+	{
+		var springMap:FlxTilemap = new FlxTilemap();
+
+		springMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map6.csv"), "assets/fuel.png", 16, 16);
+
+		for (ty in 0...springMap.heightInTiles)
+		{
+			for (tx in 0...springMap.widthInTiles)
+			{
+				if (springMap.getTile(tx,ty) == 1)
+				{
+					springs.add(new Spring(tx,ty));
 				}
 			}
 		}

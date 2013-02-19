@@ -143,6 +143,10 @@ class Assets {
 			resourceTypes.set ("assets/mapCSV_Group1_Map3.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Group1_Map4.csv", NME_assets_mapcsv_group1_map4_csv);
 			resourceTypes.set ("assets/mapCSV_Group1_Map4.csv", "text");
+			resourceClasses.set ("assets/mapCSV_Group1_Map5.csv", NME_assets_mapcsv_group1_map5_csv);
+			resourceTypes.set ("assets/mapCSV_Group1_Map5.csv", "text");
+			resourceClasses.set ("assets/mapCSV_Group1_Map6.csv", NME_assets_mapcsv_group1_map6_csv);
+			resourceTypes.set ("assets/mapCSV_Group1_Map6.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Level1_Map.csv", NME_assets_mapcsv_level1_map_csv);
 			resourceTypes.set ("assets/mapCSV_Level1_Map.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Level1_Sky.csv", NME_assets_mapcsv_level1_sky_csv);
@@ -153,6 +157,10 @@ class Assets {
 			resourceTypes.set ("assets/spike.png", "image");
 			resourceClasses.set ("assets/spikes.png", NME_assets_spikes_png);
 			resourceTypes.set ("assets/spikes.png", "image");
+			resourceClasses.set ("assets/spring.png", NME_assets_spring_png);
+			resourceTypes.set ("assets/spring.png", "image");
+			resourceClasses.set ("assets/spring_tile.png", NME_assets_spring_tile_png);
+			resourceTypes.set ("assets/spring_tile.png", "image");
 			resourceClasses.set ("assets/tiles.png", NME_assets_tiles_png);
 			resourceTypes.set ("assets/tiles.png", "image");
 			resourceClasses.set ("assets/tiles.png.bak", NME_assets_tiles_png_bak);
