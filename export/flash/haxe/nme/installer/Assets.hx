@@ -115,6 +115,8 @@ class Assets {
 			resourceTypes.set ("assets/data/vcr/stop.png", "image");
 			resourceClasses.set ("assets/data/vis/bounds.png", NME_assets_data_vis_bounds_png);
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
+			resourceClasses.set ("assets/driller.png", NME_assets_driller_png);
+			resourceTypes.set ("assets/driller.png", "image");
 			resourceClasses.set ("assets/fuel.png", NME_assets_fuel_png);
 			resourceTypes.set ("assets/fuel.png", "image");
 			resourceClasses.set ("assets/fuel_tiles.png", NME_assets_fuel_tiles_png);

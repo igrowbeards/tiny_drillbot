@@ -36,7 +36,7 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 
-		FlxG.bgColor = 0xff888888;
+		FlxG.bgColor = 0xff446e6f;
 
 
 		level = new FlxTilemap();
@@ -61,7 +61,7 @@ class PlayState extends FlxState
 		// Create the Exit
 		exit = new FlxSprite(35 * 8,26 * 8);
 		exit.makeGraphic(16,16,0xff666666);
-		//exit.exists = false;
+		exit.exists = false;
 
 		parseSpikes();
 		parseFuel();

@@ -13,8 +13,16 @@ class Player extends FlxSprite
 	public function new():Void
 	{
 		super();
-		x = (FlxG.width / 2) - 4;
-		makeGraphic(5,7,0xff990000);
+		x = 32;
+		y = 8;
+		loadGraphic("assets/driller.png");
+		loadGraphic("assets/driller.png",true,true,8,8,true);
+		addAnimation("idle", [0,1,2,3], 10, true);
+		addAnimation("walk", [4,5,6,7], 10, true);
+		//makeGraphic(5,7,0xff990000);
+
+		width = 3;
+		offset.x = 2;
 
 		if (FlxG.getPlugin(FlxControl) == null) {
 			FlxG.addPlugin(new FlxControl());
@@ -38,6 +46,18 @@ class Player extends FlxSprite
 	override public function update():Void
 	{
 		super.update();
+
+		if (touching == FlxObject.FLOOR)
+		{
+			if (velocity.x != 0)
+			{
+				play("walk");
+			}
+			else
+			{
+				play("idle");
+			}
+		}
 	}
 
 }
