@@ -13,8 +13,8 @@ class Goomba extends FlxSprite
 	public function new(x:Float, y:Float):Void
 	{
 		super(x * 8, (y * 8) + 4);
-		loadGraphic("assets/goomba.png",true,true,5,6,true);
-		addAnimation("walk", [0,1,1,2], 10, true);
+		loadGraphic("assets/goomba.png",true,true,5,5,true);
+		addAnimation("walk", [0,1,1,2], 12, true);
 		facing = FlxObject.RIGHT;
 		acceleration.y = 50;
 		velocity.x = 30;

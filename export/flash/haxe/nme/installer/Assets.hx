@@ -153,6 +153,8 @@ class Assets {
 			resourceTypes.set ("assets/mapCSV_Level1_Sky.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Level1_Stars.csv", NME_assets_mapcsv_level1_stars_csv);
 			resourceTypes.set ("assets/mapCSV_Level1_Stars.csv", "text");
+			resourceClasses.set ("assets/rock_tiles.png", NME_assets_rock_tiles_png);
+			resourceTypes.set ("assets/rock_tiles.png", "image");
 			resourceClasses.set ("assets/spike.png", NME_assets_spike_png);
 			resourceTypes.set ("assets/spike.png", "image");
 			resourceClasses.set ("assets/spikes.png", NME_assets_spikes_png);
@@ -165,6 +167,8 @@ class Assets {
 			resourceTypes.set ("assets/tiles.png", "image");
 			resourceClasses.set ("assets/tiles.png.bak", NME_assets_tiles_png_bak);
 			resourceTypes.set ("assets/tiles.png.bak", "binary");
+			resourceClasses.set ("assets/work/tiles.psd", NME_assets_work_tiles_psd);
+			resourceTypes.set ("assets/work/tiles.psd", "binary");
 			
 			
 			initialized = true;

@@ -41,7 +41,7 @@ class PlayState extends FlxState
 
 
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),FlxTilemap.imgAuto, 0, 0, FlxTilemap.AUTO);
+		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/rock_tiles.png",8,8,0,0,1,6);
 		Registry.level = level;
 		Registry.player = player;
 

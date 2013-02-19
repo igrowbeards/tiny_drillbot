@@ -377,6 +377,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mapCSV_Level1_Stars.csv");
          
 		
+		if (inName=="assets/rock_tiles.png")
+			 
+            return Assets.getBitmapData ("assets/rock_tiles.png");
+         
+		
 		if (inName=="assets/spike.png")
 			 
             return Assets.getBitmapData ("assets/spike.png");
@@ -405,6 +410,11 @@ class ApplicationMain {
 		if (inName=="assets/tiles.png.bak")
 			 
             return Assets.getBytes ("assets/tiles.png.bak");
+         
+		
+		if (inName=="assets/work/tiles.psd")
+			 
+            return Assets.getBytes ("assets/work/tiles.psd");
          
 		
 		
@@ -482,12 +492,14 @@ class NME_assets_mapcsv_group1_map6_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_sky_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_stars_csv extends nme.utils.ByteArray { }
+class NME_assets_rock_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spike_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spikes_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spring_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spring_tile_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png_bak extends nme.utils.ByteArray { }
+class NME_assets_work_tiles_psd extends nme.utils.ByteArray { }
 
 
 #else
