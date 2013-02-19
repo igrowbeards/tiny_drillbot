@@ -16,6 +16,7 @@ import org.flixel.FlxGroup;
 import org.flixel.FlxParticle;
 import org.flixel.FlxTimer;
 import org.flixel.FlxCamera;
+import addons.FlxBackdrop;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
 
@@ -37,11 +38,12 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 
-		FlxG.bgColor = 0xff446e6f;
+		FlxG.bgColor = 0xff000012;
 
+		add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
 
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/rock_tiles.png",8,8,0,0,1,6);
+		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/rock_tiles.png",8,8,0,0,1,8);
 		Registry.level = level;
 		Registry.player = player;
 

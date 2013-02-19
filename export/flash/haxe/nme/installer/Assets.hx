@@ -43,6 +43,8 @@ class Assets {
 			
 			resourceClasses.set ("Beep", NME_assets_data_beep_mp3);
 			resourceTypes.set ("Beep", "sound");
+			resourceClasses.set ("assets/backdrop.png", NME_assets_backdrop_png);
+			resourceTypes.set ("assets/backdrop.png", "image");
 			resourceClasses.set ("assets/bullet.png", NME_assets_bullet_png);
 			resourceTypes.set ("assets/bullet.png", "image");
 			resourceClasses.set ("assets/data/autotiles.png", NME_assets_data_autotiles_png);
@@ -117,6 +119,8 @@ class Assets {
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
 			resourceClasses.set ("assets/driller.png", NME_assets_driller_png);
 			resourceTypes.set ("assets/driller.png", "image");
+			resourceClasses.set ("assets/elevator.png", NME_assets_elevator_png);
+			resourceTypes.set ("assets/elevator.png", "image");
 			resourceClasses.set ("assets/fuel.png", NME_assets_fuel_png);
 			resourceTypes.set ("assets/fuel.png", "image");
 			resourceClasses.set ("assets/fuel_tiles.png", NME_assets_fuel_tiles_png);

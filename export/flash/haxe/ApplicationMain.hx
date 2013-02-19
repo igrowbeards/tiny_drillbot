@@ -102,6 +102,11 @@ class ApplicationMain {
             return Assets.getSound ("Beep");
          
 		
+		if (inName=="assets/backdrop.png")
+			 
+            return Assets.getBitmapData ("assets/backdrop.png");
+         
+		
 		if (inName=="assets/bullet.png")
 			 
             return Assets.getBitmapData ("assets/bullet.png");
@@ -287,6 +292,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/driller.png");
          
 		
+		if (inName=="assets/elevator.png")
+			 
+            return Assets.getBitmapData ("assets/elevator.png");
+         
+		
 		if (inName=="assets/fuel.png")
 			 
             return Assets.getBitmapData ("assets/fuel.png");
@@ -437,6 +447,7 @@ class ApplicationMain {
 }
 
 class NME_assets_data_beep_mp3 extends nme.media.Sound { }
+class NME_assets_backdrop_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_bullet_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_alt_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -474,6 +485,7 @@ class NME_assets_data_vcr_step_png extends nme.display.BitmapData { public funct
 class NME_assets_data_vcr_stop_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_driller_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_elevator_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_goomba_png extends nme.display.BitmapData { public function new () { super (0, 0); } }

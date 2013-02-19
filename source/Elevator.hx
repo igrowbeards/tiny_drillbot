@@ -15,7 +15,7 @@ class Elevator extends FlxSprite
 	public function new(X:Int, Y:Int, Width:Int, Height:Int, Speed:Int = 10):Void
 	{
 		super(X * 8, Y * 8);
-		makeGraphic(16,8,0xff000044);
+		loadGraphic("assets/elevator.png");
 
 		startPoint = new FlxPoint(X * 8, Y * 8);
 		endPoint = new FlxPoint((X + Width) * 8, (Y + Height) * 8);
