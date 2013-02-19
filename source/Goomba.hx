@@ -13,10 +13,12 @@ class Goomba extends FlxSprite
 	public function new(x:Float, y:Float):Void
 	{
 		super(x * 8, (y * 8) + 4);
-		makeGraphic(4,4,0xff990000);
+		loadGraphic("assets/goomba.png",true,true,5,6,true);
+		addAnimation("walk", [0,1,1,2], 10, true);
 		facing = FlxObject.RIGHT;
 		acceleration.y = 50;
 		velocity.x = 30;
+		play("walk");
 	}
 
 	override public function destroy():Void
@@ -38,7 +40,7 @@ class Goomba extends FlxSprite
 			facing = FlxObject.LEFT;
 			velocity.x = -speed;
 		}
-		else if (facing == FlxObject.RIGHT)
+		else if (facing == FlxObject.RIGHT && !justTouched(FlxObject.RIGHT))
 		{
 			if(overlapsAt(x + 8, y + 1, Registry.level))
 			{
@@ -49,7 +51,7 @@ class Goomba extends FlxSprite
 				facing = FlxObject.LEFT;
 			}
 		}
-		else {
+		else if (facing == FlxObject.LEFT && !justTouched(FlxObject.LEFT)) {
 			if(overlapsAt(x - 8, y + 1, Registry.level))
 			{
 				// do nothing

@@ -297,6 +297,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/fuel_tiles.png");
          
 		
+		if (inName=="assets/goomba.png")
+			 
+            return Assets.getBitmapData ("assets/goomba.png");
+         
+		
 		if (inName=="assets/goomba_tiles.png")
 			 
             return Assets.getBitmapData ("assets/goomba_tiles.png");
@@ -441,6 +446,7 @@ class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public fun
 class NME_assets_driller_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_goomba_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_goomba_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_haxeflixel_svg extends nme.utils.ByteArray { }
 class NME_assets_level1_dam extends nme.utils.ByteArray { }
