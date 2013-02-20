@@ -131,6 +131,8 @@ class Assets {
 			resourceTypes.set ("assets/goomba_tiles.png", "image");
 			resourceClasses.set ("assets/HaxeFlixel.svg", NME_assets_haxeflixel_svg);
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
+			resourceClasses.set ("assets/lava.png", NME_assets_lava_png);
+			resourceTypes.set ("assets/lava.png", "image");
 			resourceClasses.set ("assets/level1.dam", NME_assets_level1_dam);
 			resourceTypes.set ("assets/level1.dam", "text");
 			resourceClasses.set ("assets/level1.dam.bak", NME_assets_level1_dam_bak);

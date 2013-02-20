@@ -15,7 +15,6 @@ class Player extends FlxSprite
 		super();
 		x = 32;
 		y = 8;
-		loadGraphic("assets/driller.png");
 		loadGraphic("assets/driller.png",true,true,8,8,true);
 		addAnimation("idle", [0,1,2,3], 10, true);
 		addAnimation("walk", [4,5,6,7], 10, true);
