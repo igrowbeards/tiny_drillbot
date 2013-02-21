@@ -110,9 +110,9 @@ class PlayState extends FlxState
 		FlxG.collide(goombas,spikes);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
-		FlxG.overlap(player,exit,changeLevel);
+		//FlxG.overlap(player,exit,changeLevel);
 		FlxG.collide(player,goombas,hitEnemy);
-		FlxG.collide(player,springs,player.hitSpring);
+		FlxG.collide(player,springs,hitSpring);
 
 		if (player.y > level.height)
 		{
@@ -125,16 +125,24 @@ class PlayState extends FlxState
 
 	}
 
-	public function changeLevel(Player:FlxObject,Exit:FlxObject):Void
+	public function changeLevel(playerRef:FlxObject,Exit:FlxObject):Void
 	{
 		FlxG.resetState();
 		FlxControl.clear();
 		FlxG.score = 0;
 	}
 
-	public function hitSpikes(Player:FlxObject,spikes:FlxObject):Void
+	public function hitSpikes(playerRef:FlxObject,spikes:FlxObject):Void
 	{
 		player.reset((FlxG.width / 2) - 4, 12);
+	}
+
+	public function hitSpring(PlayerRef:FlxObject,SpringRef:FlxObject):Void
+	{
+		var p:Player = cast(PlayerRef,Player);
+		var s:Spring = cast(SpringRef,Spring);
+		p.hitSpring();
+		s.play("boing");
 	}
 
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
@@ -145,17 +153,17 @@ class PlayState extends FlxState
 		fuelCollected.text = FlxG.score + "/" + maxFuel;
 	}
 
-	public function hitEnemy(playerRef:FlxObject,enemyRef:FlxObject):Void
+	public function hitEnemy(PlayerRef:FlxObject,EnemyRef:FlxObject):Void
 	{
-		if(playerRef.justTouched(FlxObject.DOWN))
+		if(PlayerRef.justTouched(FlxObject.DOWN))
 		{
-			enemyRef.kill();
-			player.velocity.y = -50;
-			player.acceleration.y = -50;
+			EnemyRef.kill();
+			PlayerRef.velocity.y = -50;
+			PlayerRef.acceleration.y = -50;
 		}
 		else
 		{
-			player.reset((FlxG.width / 2) - 4, 12);
+			PlayerRef.reset((FlxG.width / 2) - 4, 12);
 		}
 	}
 

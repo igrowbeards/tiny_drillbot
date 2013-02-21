@@ -169,6 +169,8 @@ class Assets {
 			resourceTypes.set ("assets/spring.png", "image");
 			resourceClasses.set ("assets/spring_tile.png", NME_assets_spring_tile_png);
 			resourceTypes.set ("assets/spring_tile.png", "image");
+			resourceClasses.set ("assets/springboard.png", NME_assets_springboard_png);
+			resourceTypes.set ("assets/springboard.png", "image");
 			resourceClasses.set ("assets/tiles.png", NME_assets_tiles_png);
 			resourceTypes.set ("assets/tiles.png", "image");
 			resourceClasses.set ("assets/tiles.png.bak", NME_assets_tiles_png_bak);

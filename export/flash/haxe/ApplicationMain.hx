@@ -417,6 +417,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/spring_tile.png");
          
 		
+		if (inName=="assets/springboard.png")
+			 
+            return Assets.getBitmapData ("assets/springboard.png");
+         
+		
 		if (inName=="assets/tiles.png")
 			 
             return Assets.getBitmapData ("assets/tiles.png");
@@ -515,6 +520,7 @@ class NME_assets_spike_png extends nme.display.BitmapData { public function new 
 class NME_assets_spikes_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spring_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spring_tile_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_springboard_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_tiles_png_bak extends nme.utils.ByteArray { }
 class NME_assets_work_tiles_psd extends nme.utils.ByteArray { }

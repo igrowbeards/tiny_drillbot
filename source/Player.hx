@@ -18,7 +18,6 @@ class Player extends FlxSprite
 		loadGraphic("assets/driller.png",true,true,8,8,true);
 		addAnimation("idle", [0,1,2,3], 10, true);
 		addAnimation("walk", [4,5,6,7], 10, true);
-		//makeGraphic(5,7,0xff990000);
 
 		width = 3;
 		offset.x = 2;
@@ -34,11 +33,9 @@ class Player extends FlxSprite
 		//FlxControl.player1.setCursorControl(false, false, true, true);
 		FlxControl.player1.setCursorControl(false,false,true,true);
 		// Gravity will pull the player down
-		FlxControl.player1.setGravity(0, 400);
+		FlxControl.player1.setGravity(0, 500);
 		// All speeds are in pixels per second, the follow lets the player run left/right
 		FlxControl.player1.setMovementSpeed(400, 0, 50, 200, 400, 0);
-		//	And SPACE BAR will make them jump up to a maximum of 200 pixels (per second), only when touching the FLOOR
-		//FlxControl.player1.setJumpButton("UP", FlxControlHandler.KEYMODE_JUST_DOWN, 120, FlxObject.FLOOR, 250, 200);
 
 	}
 
@@ -57,12 +54,16 @@ class Player extends FlxSprite
 				play("idle");
 			}
 		}
+
+
+
 	}
 
-	public function hitSpring(player:FlxObject,spring:FlxObject):Void
+	public function hitSpring():Void
+
 	{
-		velocity.y = -150;
-		acceleration.y = -150;
+		velocity.y = -175;
+		acceleration.y = -175;
 	}
 
 }
