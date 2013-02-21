@@ -43,6 +43,16 @@ class Assets {
 			
 			resourceClasses.set ("Beep", NME_assets_data_beep_mp3);
 			resourceTypes.set ("Beep", "sound");
+			resourceClasses.set ("spring_boing", NME_assets_spring_wav);
+			resourceTypes.set ("spring_boing", "sound");
+			resourceClasses.set ("fuel_pickup", NME_assets_fuel_pickup_wav);
+			resourceTypes.set ("fuel_pickup", "sound");
+			resourceClasses.set ("hurt", NME_assets_hurt_wav);
+			resourceTypes.set ("hurt", "sound");
+			resourceClasses.set ("stomp", NME_assets_stomp_wav);
+			resourceTypes.set ("stomp", "sound");
+			resourceClasses.set ("exit_appear", NME_assets_exit_appear_wav);
+			resourceTypes.set ("exit_appear", "sound");
 			resourceClasses.set ("assets/backdrop.png", NME_assets_backdrop_png);
 			resourceTypes.set ("assets/backdrop.png", "image");
 			resourceClasses.set ("assets/bullet.png", NME_assets_bullet_png);

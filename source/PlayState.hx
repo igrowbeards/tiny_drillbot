@@ -110,7 +110,7 @@ class PlayState extends FlxState
 		FlxG.collide(goombas,spikes);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
-		//FlxG.overlap(player,exit,changeLevel);
+		FlxG.overlap(player,exit,changeLevel);
 		FlxG.collide(player,goombas,hitEnemy);
 		FlxG.collide(player,springs,hitSpring);
 
@@ -125,15 +125,21 @@ class PlayState extends FlxState
 
 	}
 
+	public function exit_appear():Void
+	{
+	}
+
 	public function changeLevel(playerRef:FlxObject,Exit:FlxObject):Void
 	{
 		FlxG.resetState();
 		FlxControl.clear();
 		FlxG.score = 0;
+		FlxG.play("exit_appear");
 	}
 
 	public function hitSpikes(playerRef:FlxObject,spikes:FlxObject):Void
 	{
+		FlxG.play("hurt");
 		player.reset((FlxG.width / 2) - 4, 12);
 	}
 
@@ -143,6 +149,7 @@ class PlayState extends FlxState
 		var s:Spring = cast(SpringRef,Spring);
 		p.hitSpring();
 		s.play("boing");
+		FlxG.play("spring_boing");
 	}
 
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
@@ -151,18 +158,21 @@ class PlayState extends FlxState
 		totalFuel --;
 		FlxG.score ++;
 		fuelCollected.text = FlxG.score + "/" + maxFuel;
+		FlxG.play("fuel_pickup");
 	}
 
 	public function hitEnemy(PlayerRef:FlxObject,EnemyRef:FlxObject):Void
 	{
 		if(PlayerRef.justTouched(FlxObject.DOWN))
 		{
+			FlxG.play("stomp");
 			EnemyRef.kill();
 			PlayerRef.velocity.y = -50;
 			PlayerRef.acceleration.y = -50;
 		}
 		else
 		{
+			FlxG.play("hurt");
 			PlayerRef.reset((FlxG.width / 2) - 4, 12);
 		}
 	}

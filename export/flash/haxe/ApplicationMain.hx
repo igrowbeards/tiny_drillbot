@@ -102,6 +102,31 @@ class ApplicationMain {
             return Assets.getSound ("Beep");
          
 		
+		if (inName=="spring_boing")
+			 
+            return Assets.getSound ("spring_boing");
+         
+		
+		if (inName=="fuel_pickup")
+			 
+            return Assets.getSound ("fuel_pickup");
+         
+		
+		if (inName=="hurt")
+			 
+            return Assets.getSound ("hurt");
+         
+		
+		if (inName=="stomp")
+			 
+            return Assets.getSound ("stomp");
+         
+		
+		if (inName=="exit_appear")
+			 
+            return Assets.getSound ("exit_appear");
+         
+		
 		if (inName=="assets/backdrop.png")
 			 
             return Assets.getBitmapData ("assets/backdrop.png");
@@ -457,6 +482,11 @@ class ApplicationMain {
 }
 
 class NME_assets_data_beep_mp3 extends nme.media.Sound { }
+class NME_assets_spring_wav extends nme.media.Sound { }
+class NME_assets_fuel_pickup_wav extends nme.media.Sound { }
+class NME_assets_hurt_wav extends nme.media.Sound { }
+class NME_assets_stomp_wav extends nme.media.Sound { }
+class NME_assets_exit_appear_wav extends nme.media.Sound { }
 class NME_assets_backdrop_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_bullet_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
