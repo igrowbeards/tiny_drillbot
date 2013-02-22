@@ -110,7 +110,7 @@ class PlayState extends FlxState
 		FlxG.collide(goombas,spikes);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
-		FlxG.overlap(player,exit,changeLevel);
+		FlxG.overlap(player,exit,fadeOutLevel);
 		FlxG.collide(player,goombas,hitEnemy);
 		FlxG.collide(player,springs,hitSpring);
 
@@ -129,12 +129,16 @@ class PlayState extends FlxState
 	{
 	}
 
-	public function changeLevel(playerRef:FlxObject,Exit:FlxObject):Void
+	public function fadeOutLevel(playerRef:FlxObject,exitRef:FlxObject):Void
+	{
+		FlxG.fade(0xff000000,1,changeLevel);
+	}
+
+	public function changeLevel():Void
 	{
 		FlxG.resetState();
 		FlxControl.clear();
 		FlxG.score = 0;
-		FlxG.play("exit_appear");
 	}
 
 	public function hitSpikes(playerRef:FlxObject,spikes:FlxObject):Void
