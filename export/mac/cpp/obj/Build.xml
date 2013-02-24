@@ -1600,6 +1600,7 @@
    <depend name="include/org/flixel/FlxObject.h"/>
    <depend name="include/org/flixel/FlxPoint.h"/>
    <depend name="include/org/flixel/FlxRect.h"/>
+   <depend name="include/org/flixel/FlxSound.h"/>
    <depend name="include/org/flixel/FlxSprite.h"/>
    <depend name="include/org/flixel/FlxState.h"/>
    <depend name="include/org/flixel/FlxText.h"/>

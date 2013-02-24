@@ -354,10 +354,24 @@ class ApplicationMain
 			
 		}
 		
+		if (inName == "assets/exit_appear.wav")
+		{
+			
+			return nme.Assets.getSound ("assets/exit_appear.wav");
+			
+		}
+		
 		if (inName == "assets/fuel.png")
 		{
 			
 			return nme.Assets.getBitmapData ("assets/fuel.png");
+			
+		}
+		
+		if (inName == "assets/fuel_pickup.wav")
+		{
+			
+			return nme.Assets.getSound ("assets/fuel_pickup.wav");
 			
 		}
 		
@@ -386,6 +400,13 @@ class ApplicationMain
 		{
 			
 			return nme.Assets.getText ("assets/HaxeFlixel.svg");
+			
+		}
+		
+		if (inName == "assets/hurt.wav")
+		{
+			
+			return nme.Assets.getSound ("assets/hurt.wav");
 			
 		}
 		
@@ -515,6 +536,13 @@ class ApplicationMain
 			
 		}
 		
+		if (inName == "assets/spring.wav")
+		{
+			
+			return nme.Assets.getSound ("assets/spring.wav");
+			
+		}
+		
 		if (inName == "assets/spring_tile.png")
 		{
 			
@@ -526,6 +554,13 @@ class ApplicationMain
 		{
 			
 			return nme.Assets.getBitmapData ("assets/springboard.png");
+			
+		}
+		
+		if (inName == "assets/stomp.wav")
+		{
+			
+			return nme.Assets.getSound ("assets/stomp.wav");
 			
 		}
 		

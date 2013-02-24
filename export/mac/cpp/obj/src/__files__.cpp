@@ -175,11 +175,11 @@ const char *__hxcpp_all_files[] = {
 const char *__hxcpp_class_path[] = {
 #ifdef HXCPP_DEBUGGER
 	"export/mac/cpp/haxe/",
-	"/Applications/Stencyl3.0Beta/plaf/haxe/lib/flixel/1,08/",
-	"/Applications/Stencyl3.0Beta/plaf/haxe/lib/nme/3,5,5/",
+	"/usr/lib/haxe/lib/flixel/1,08/",
+	"/usr/lib/haxe/lib/nme/3,5,5/",
 	"source/",
-	"/Applications/Stencyl3.0Beta/plaf/haxe/lib/nme/3,5,5/",
-	"/Applications/Stencyl3.0Beta/plaf/haxe/lib/flixel/1,08/",
+	"/usr/lib/haxe/lib/nme/3,5,5/",
+	"/usr/lib/haxe/lib/flixel/1,08/",
 	"",
 	"/",
 	"/usr/lib/haxe/std/cpp/_std/",

@@ -42,6 +42,11 @@ class ApplicationMain {
 		
 		
 		var loader:Loader = new Loader ();
+		loaders.set ("assets/backdrop.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
 		loaders.set ("assets/bullet.png", loader);
 		total ++;
 		
@@ -210,9 +215,47 @@ class ApplicationMain {
 		total ++;
 		
 		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/driller.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/elevator.png", loader);
+		total ++;
+		
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/fuel.png", loader);
+		total ++;
+		
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/fuel_tiles.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/goomba.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/goomba_tiles.png", loader);
+		total ++;
+		
+		
 		var urlLoader:URLLoader = new URLLoader ();
 		urlLoader.dataFormat = TEXT;
 		urlLoaders.set ("assets/HaxeFlixel.svg", urlLoader);
+		total ++;
+		
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/lava.png", loader);
 		total ++;
 		
 		
@@ -248,6 +291,36 @@ class ApplicationMain {
 		
 		var urlLoader:URLLoader = new URLLoader ();
 		urlLoader.dataFormat = TEXT;
+		urlLoaders.set ("assets/mapCSV_Group1_Map2.csv", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = TEXT;
+		urlLoaders.set ("assets/mapCSV_Group1_Map3.csv", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = TEXT;
+		urlLoaders.set ("assets/mapCSV_Group1_Map4.csv", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = TEXT;
+		urlLoaders.set ("assets/mapCSV_Group1_Map5.csv", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = TEXT;
+		urlLoaders.set ("assets/mapCSV_Group1_Map6.csv", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = TEXT;
 		urlLoaders.set ("assets/mapCSV_Level1_Map.csv", urlLoader);
 		total ++;
 		
@@ -265,7 +338,51 @@ class ApplicationMain {
 		
 		
 		var loader:Loader = new Loader ();
+		loaders.set ("assets/rock_tiles.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/spike.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/spikes.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/spring.png", loader);
+		total ++;
+		
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/spring_tile.png", loader);
+		total ++;
+		
+		
+		var loader:Loader = new Loader ();
+		loaders.set ("assets/springboard.png", loader);
+		total ++;
+		
+		
+		
+		var loader:Loader = new Loader ();
 		loaders.set ("assets/tiles.png", loader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = BINARY;
+		urlLoaders.set ("assets/tiles.png.bak", urlLoader);
+		total ++;
+		
+		
+		var urlLoader:URLLoader = new URLLoader ();
+		urlLoader.dataFormat = BINARY;
+		urlLoaders.set ("assets/work/tiles.psd", urlLoader);
 		total ++;
 		
 		
@@ -306,6 +423,12 @@ class ApplicationMain {
 
    public static function getAsset(inName:String):Dynamic {
 	   
+		
+		if (inName=="assets/backdrop.png") {
+			
+			return Assets.getBitmapData ("assets/backdrop.png");
+			
+		}
 		
 		if (inName=="assets/bullet.png") {
 			
@@ -529,9 +652,69 @@ class ApplicationMain {
 			
 		}
 		
+		if (inName=="assets/driller.png") {
+			
+			return Assets.getBitmapData ("assets/driller.png");
+			
+		}
+		
+		if (inName=="assets/elevator.png") {
+			
+			return Assets.getBitmapData ("assets/elevator.png");
+			
+		}
+		
+		if (inName=="assets/exit_appear.wav") {
+			
+			return Assets.getSound ("assets/exit_appear.wav");
+			
+		}
+		
+		if (inName=="assets/fuel.png") {
+			
+			return Assets.getBitmapData ("assets/fuel.png");
+			
+		}
+		
+		if (inName=="assets/fuel_pickup.wav") {
+			
+			return Assets.getSound ("assets/fuel_pickup.wav");
+			
+		}
+		
+		if (inName=="assets/fuel_tiles.png") {
+			
+			return Assets.getBitmapData ("assets/fuel_tiles.png");
+			
+		}
+		
+		if (inName=="assets/goomba.png") {
+			
+			return Assets.getBitmapData ("assets/goomba.png");
+			
+		}
+		
+		if (inName=="assets/goomba_tiles.png") {
+			
+			return Assets.getBitmapData ("assets/goomba_tiles.png");
+			
+		}
+		
 		if (inName=="assets/HaxeFlixel.svg") {
 			
 			return Assets.getText ("assets/HaxeFlixel.svg");
+			
+		}
+		
+		if (inName=="assets/hurt.wav") {
+			
+			return Assets.getSound ("assets/hurt.wav");
+			
+		}
+		
+		if (inName=="assets/lava.png") {
+			
+			return Assets.getBitmapData ("assets/lava.png");
 			
 		}
 		
@@ -565,6 +748,36 @@ class ApplicationMain {
 			
 		}
 		
+		if (inName=="assets/mapCSV_Group1_Map2.csv") {
+			
+			return Assets.getText ("assets/mapCSV_Group1_Map2.csv");
+			
+		}
+		
+		if (inName=="assets/mapCSV_Group1_Map3.csv") {
+			
+			return Assets.getText ("assets/mapCSV_Group1_Map3.csv");
+			
+		}
+		
+		if (inName=="assets/mapCSV_Group1_Map4.csv") {
+			
+			return Assets.getText ("assets/mapCSV_Group1_Map4.csv");
+			
+		}
+		
+		if (inName=="assets/mapCSV_Group1_Map5.csv") {
+			
+			return Assets.getText ("assets/mapCSV_Group1_Map5.csv");
+			
+		}
+		
+		if (inName=="assets/mapCSV_Group1_Map6.csv") {
+			
+			return Assets.getText ("assets/mapCSV_Group1_Map6.csv");
+			
+		}
+		
 		if (inName=="assets/mapCSV_Level1_Map.csv") {
 			
 			return Assets.getText ("assets/mapCSV_Level1_Map.csv");
@@ -583,9 +796,69 @@ class ApplicationMain {
 			
 		}
 		
+		if (inName=="assets/rock_tiles.png") {
+			
+			return Assets.getBitmapData ("assets/rock_tiles.png");
+			
+		}
+		
+		if (inName=="assets/spike.png") {
+			
+			return Assets.getBitmapData ("assets/spike.png");
+			
+		}
+		
+		if (inName=="assets/spikes.png") {
+			
+			return Assets.getBitmapData ("assets/spikes.png");
+			
+		}
+		
+		if (inName=="assets/spring.png") {
+			
+			return Assets.getBitmapData ("assets/spring.png");
+			
+		}
+		
+		if (inName=="assets/spring.wav") {
+			
+			return Assets.getSound ("assets/spring.wav");
+			
+		}
+		
+		if (inName=="assets/spring_tile.png") {
+			
+			return Assets.getBitmapData ("assets/spring_tile.png");
+			
+		}
+		
+		if (inName=="assets/springboard.png") {
+			
+			return Assets.getBitmapData ("assets/springboard.png");
+			
+		}
+		
+		if (inName=="assets/stomp.wav") {
+			
+			return Assets.getSound ("assets/stomp.wav");
+			
+		}
+		
 		if (inName=="assets/tiles.png") {
 			
 			return Assets.getBitmapData ("assets/tiles.png");
+			
+		}
+		
+		if (inName=="assets/tiles.png.bak") {
+			
+			return Assets.getBytes ("assets/tiles.png.bak");
+			
+		}
+		
+		if (inName=="assets/work/tiles.psd") {
+			
+			return Assets.getBytes ("assets/work/tiles.psd");
 			
 		}
 		
@@ -674,6 +947,8 @@ class ApplicationMain {
 	
 
 	
+
+	
 		class NME_assets_data_courier_ttf extends nme.text.Font { }
 	
 
@@ -695,6 +970,56 @@ class ApplicationMain {
 
 	
 		class NME_assets_data_nokiafc22_ttf extends nme.text.Font { }
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 
 	

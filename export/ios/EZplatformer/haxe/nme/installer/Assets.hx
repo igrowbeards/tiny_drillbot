@@ -120,8 +120,12 @@ class Assets {
 			resourceTypes.set ("assets/driller.png", "image");
 			resourceNames.set ("assets/elevator.png", "assets_elevator_png");
 			resourceTypes.set ("assets/elevator.png", "image");
+			resourceNames.set ("assets/exit_appear.wav", "assets_exit_appear_wav");
+			resourceTypes.set ("assets/exit_appear.wav", "sound");
 			resourceNames.set ("assets/fuel.png", "assets_fuel_png");
 			resourceTypes.set ("assets/fuel.png", "image");
+			resourceNames.set ("assets/fuel_pickup.wav", "assets_fuel_pickup_wav");
+			resourceTypes.set ("assets/fuel_pickup.wav", "sound");
 			resourceNames.set ("assets/fuel_tiles.png", "assets_fuel_tiles_png");
 			resourceTypes.set ("assets/fuel_tiles.png", "image");
 			resourceNames.set ("assets/goomba.png", "assets_goomba_png");
@@ -130,6 +134,8 @@ class Assets {
 			resourceTypes.set ("assets/goomba_tiles.png", "image");
 			resourceNames.set ("assets/HaxeFlixel.svg", "assets_haxeflixel_svg");
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
+			resourceNames.set ("assets/hurt.wav", "assets_hurt_wav");
+			resourceTypes.set ("assets/hurt.wav", "sound");
 			resourceNames.set ("assets/lava.png", "assets_lava_png");
 			resourceTypes.set ("assets/lava.png", "image");
 			resourceNames.set ("assets/level1.dam", "assets_level1_dam");
@@ -166,10 +172,14 @@ class Assets {
 			resourceTypes.set ("assets/spikes.png", "image");
 			resourceNames.set ("assets/spring.png", "assets_spring_png");
 			resourceTypes.set ("assets/spring.png", "image");
+			resourceNames.set ("assets/spring.wav", "assets_spring_wav");
+			resourceTypes.set ("assets/spring.wav", "sound");
 			resourceNames.set ("assets/spring_tile.png", "assets_spring_tile_png");
 			resourceTypes.set ("assets/spring_tile.png", "image");
 			resourceNames.set ("assets/springboard.png", "assets_springboard_png");
 			resourceTypes.set ("assets/springboard.png", "image");
+			resourceNames.set ("assets/stomp.wav", "assets_stomp_wav");
+			resourceTypes.set ("assets/stomp.wav", "sound");
 			resourceNames.set ("assets/tiles.png", "assets_tiles_png");
 			resourceTypes.set ("assets/tiles.png", "image");
 			resourceNames.set ("assets/tiles.png.bak", "assets_tiles_png_bak");

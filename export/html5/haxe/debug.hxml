@@ -2,13 +2,13 @@
 -lib nme
 -lib flixel
 -cp source
--cp /Applications/Stencyl3.0Beta/plaf/haxe/lib/nme/3,5,5/
--cp /Applications/Stencyl3.0Beta/plaf/haxe/lib/flixel/1,08/
+-cp /usr/lib/haxe/lib/nme/3,5,5/
+-cp /usr/lib/haxe/lib/flixel/1,08/
 -D nme_install_tool
 -D html5
 -D web
--resource /Users/justinedwards/projects/games/haxe-flixel/EZplatformer/assets/data/courier.ttf.hash@NME_assets_data_courier_ttf
--resource /Users/justinedwards/projects/games/haxe-flixel/EZplatformer/assets/data/nokiafc22.ttf.hash@NME_assets_data_nokiafc22_ttf
+-resource /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/assets/data/courier.ttf.hash@NME_assets_data_courier_ttf
+-resource /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/assets/data/nokiafc22.ttf.hash@NME_assets_data_nokiafc22_ttf
 -js export/html5/bin/EZplatformer.js
 -cp export/html5/haxe
 -D html5

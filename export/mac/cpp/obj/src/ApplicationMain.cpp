@@ -367,146 +367,171 @@ Dynamic ApplicationMain_obj::getAsset( ::String inName){
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/elevator.png"),null());
 	}
 	HX_STACK_LINE(394)
-	if (((inName == HX_CSTRING("assets/fuel.png")))){
+	if (((inName == HX_CSTRING("assets/exit_appear.wav")))){
 		HX_STACK_LINE(395)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/fuel.png"),null());
+		return ::nme::installer::Assets_obj::getSound(HX_CSTRING("assets/exit_appear.wav"));
 	}
 	HX_STACK_LINE(401)
-	if (((inName == HX_CSTRING("assets/fuel_tiles.png")))){
+	if (((inName == HX_CSTRING("assets/fuel.png")))){
 		HX_STACK_LINE(402)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/fuel_tiles.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/fuel.png"),null());
 	}
 	HX_STACK_LINE(408)
-	if (((inName == HX_CSTRING("assets/goomba.png")))){
+	if (((inName == HX_CSTRING("assets/fuel_pickup.wav")))){
 		HX_STACK_LINE(409)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/goomba.png"),null());
+		return ::nme::installer::Assets_obj::getSound(HX_CSTRING("assets/fuel_pickup.wav"));
 	}
 	HX_STACK_LINE(415)
-	if (((inName == HX_CSTRING("assets/goomba_tiles.png")))){
+	if (((inName == HX_CSTRING("assets/fuel_tiles.png")))){
 		HX_STACK_LINE(416)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/goomba_tiles.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/fuel_tiles.png"),null());
 	}
 	HX_STACK_LINE(422)
-	if (((inName == HX_CSTRING("assets/HaxeFlixel.svg")))){
+	if (((inName == HX_CSTRING("assets/goomba.png")))){
 		HX_STACK_LINE(423)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/HaxeFlixel.svg"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/goomba.png"),null());
 	}
 	HX_STACK_LINE(429)
-	if (((inName == HX_CSTRING("assets/lava.png")))){
+	if (((inName == HX_CSTRING("assets/goomba_tiles.png")))){
 		HX_STACK_LINE(430)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/lava.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/goomba_tiles.png"),null());
 	}
 	HX_STACK_LINE(436)
-	if (((inName == HX_CSTRING("assets/level1.dam")))){
+	if (((inName == HX_CSTRING("assets/HaxeFlixel.svg")))){
 		HX_STACK_LINE(437)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.dam"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/HaxeFlixel.svg"));
 	}
 	HX_STACK_LINE(443)
-	if (((inName == HX_CSTRING("assets/level1.dam.bak")))){
+	if (((inName == HX_CSTRING("assets/hurt.wav")))){
 		HX_STACK_LINE(444)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.dam.bak"));
+		return ::nme::installer::Assets_obj::getSound(HX_CSTRING("assets/hurt.wav"));
 	}
 	HX_STACK_LINE(450)
-	if (((inName == HX_CSTRING("assets/level1.txt")))){
+	if (((inName == HX_CSTRING("assets/lava.png")))){
 		HX_STACK_LINE(451)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.txt"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/lava.png"),null());
 	}
 	HX_STACK_LINE(457)
-	if (((inName == HX_CSTRING("assets/level1_tileset.tmx")))){
+	if (((inName == HX_CSTRING("assets/level1.dam")))){
 		HX_STACK_LINE(458)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1_tileset.tmx"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.dam"));
 	}
 	HX_STACK_LINE(464)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map1.csv")))){
+	if (((inName == HX_CSTRING("assets/level1.dam.bak")))){
 		HX_STACK_LINE(465)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map1.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.dam.bak"));
 	}
 	HX_STACK_LINE(471)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map2.csv")))){
+	if (((inName == HX_CSTRING("assets/level1.txt")))){
 		HX_STACK_LINE(472)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map2.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1.txt"));
 	}
 	HX_STACK_LINE(478)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map3.csv")))){
+	if (((inName == HX_CSTRING("assets/level1_tileset.tmx")))){
 		HX_STACK_LINE(479)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map3.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/level1_tileset.tmx"));
 	}
 	HX_STACK_LINE(485)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map4.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map1.csv")))){
 		HX_STACK_LINE(486)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map4.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map1.csv"));
 	}
 	HX_STACK_LINE(492)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map5.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map2.csv")))){
 		HX_STACK_LINE(493)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map5.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map2.csv"));
 	}
 	HX_STACK_LINE(499)
-	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map6.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map3.csv")))){
 		HX_STACK_LINE(500)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map6.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map3.csv"));
 	}
 	HX_STACK_LINE(506)
-	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Map.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map4.csv")))){
 		HX_STACK_LINE(507)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Map.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map4.csv"));
 	}
 	HX_STACK_LINE(513)
-	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Sky.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map5.csv")))){
 		HX_STACK_LINE(514)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Sky.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map5.csv"));
 	}
 	HX_STACK_LINE(520)
-	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Stars.csv")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Group1_Map6.csv")))){
 		HX_STACK_LINE(521)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Stars.csv"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map6.csv"));
 	}
 	HX_STACK_LINE(527)
-	if (((inName == HX_CSTRING("assets/rock_tiles.png")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Map.csv")))){
 		HX_STACK_LINE(528)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/rock_tiles.png"),null());
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Map.csv"));
 	}
 	HX_STACK_LINE(534)
-	if (((inName == HX_CSTRING("assets/spike.png")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Sky.csv")))){
 		HX_STACK_LINE(535)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spike.png"),null());
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Sky.csv"));
 	}
 	HX_STACK_LINE(541)
-	if (((inName == HX_CSTRING("assets/spikes.png")))){
+	if (((inName == HX_CSTRING("assets/mapCSV_Level1_Stars.csv")))){
 		HX_STACK_LINE(542)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spikes.png"),null());
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Level1_Stars.csv"));
 	}
 	HX_STACK_LINE(548)
-	if (((inName == HX_CSTRING("assets/spring.png")))){
+	if (((inName == HX_CSTRING("assets/rock_tiles.png")))){
 		HX_STACK_LINE(549)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spring.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/rock_tiles.png"),null());
 	}
 	HX_STACK_LINE(555)
-	if (((inName == HX_CSTRING("assets/spring_tile.png")))){
+	if (((inName == HX_CSTRING("assets/spike.png")))){
 		HX_STACK_LINE(556)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spring_tile.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spike.png"),null());
 	}
 	HX_STACK_LINE(562)
-	if (((inName == HX_CSTRING("assets/springboard.png")))){
+	if (((inName == HX_CSTRING("assets/spikes.png")))){
 		HX_STACK_LINE(563)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/springboard.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spikes.png"),null());
 	}
 	HX_STACK_LINE(569)
-	if (((inName == HX_CSTRING("assets/tiles.png")))){
+	if (((inName == HX_CSTRING("assets/spring.png")))){
 		HX_STACK_LINE(570)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/tiles.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spring.png"),null());
 	}
 	HX_STACK_LINE(576)
-	if (((inName == HX_CSTRING("assets/tiles.png.bak")))){
+	if (((inName == HX_CSTRING("assets/spring.wav")))){
 		HX_STACK_LINE(577)
-		return ::nme::installer::Assets_obj::getBytes(HX_CSTRING("assets/tiles.png.bak"));
+		return ::nme::installer::Assets_obj::getSound(HX_CSTRING("assets/spring.wav"));
 	}
 	HX_STACK_LINE(583)
-	if (((inName == HX_CSTRING("assets/work/tiles.psd")))){
+	if (((inName == HX_CSTRING("assets/spring_tile.png")))){
 		HX_STACK_LINE(584)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/spring_tile.png"),null());
+	}
+	HX_STACK_LINE(590)
+	if (((inName == HX_CSTRING("assets/springboard.png")))){
+		HX_STACK_LINE(591)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/springboard.png"),null());
+	}
+	HX_STACK_LINE(597)
+	if (((inName == HX_CSTRING("assets/stomp.wav")))){
+		HX_STACK_LINE(598)
+		return ::nme::installer::Assets_obj::getSound(HX_CSTRING("assets/stomp.wav"));
+	}
+	HX_STACK_LINE(604)
+	if (((inName == HX_CSTRING("assets/tiles.png")))){
+		HX_STACK_LINE(605)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/tiles.png"),null());
+	}
+	HX_STACK_LINE(611)
+	if (((inName == HX_CSTRING("assets/tiles.png.bak")))){
+		HX_STACK_LINE(612)
+		return ::nme::installer::Assets_obj::getBytes(HX_CSTRING("assets/tiles.png.bak"));
+	}
+	HX_STACK_LINE(618)
+	if (((inName == HX_CSTRING("assets/work/tiles.psd")))){
+		HX_STACK_LINE(619)
 		return ::nme::installer::Assets_obj::getBytes(HX_CSTRING("assets/work/tiles.psd"));
 	}
-	HX_STACK_LINE(591)
+	HX_STACK_LINE(626)
 	return null();
 }
 

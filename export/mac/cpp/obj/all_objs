@@ -231,6 +231,7 @@ obj/darwin//src/hx/Lib.o
 obj/darwin//src/hx/Object.o
 obj/darwin//src/hx/StdLibs.o
 obj/darwin//src/hx/Debug.o
+obj/darwin//src/hx/Scriptable.o
 obj/darwin//src/hx/Thread.o
 obj/darwin//src/Array.o
 obj/darwin//src/Class.o

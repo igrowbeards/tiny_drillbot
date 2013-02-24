@@ -1,0 +1,368 @@
+TEZplatformer
+v5
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/EZplatformer.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Info.plist EZplatformer/EZplatformer-Info.plist
+cCpResource EZplatformer/assets build/Release-iphoneos/EZplatformer.app/assets
+cCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon.png EZplatformer/Icon.png
+cCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon@2x.png EZplatformer/Icon@2x.png
+cCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72.png EZplatformer/Icon-72.png
+cCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png EZplatformer/Icon-72@2x.png
+cProcessPCH++ /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth EZplatformer/EZplatformer-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer normal armv7
+cGenerateDSYMFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer
+cProcessProductPackaging "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision
+cTouch /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent
+cCodeSign /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+cValidate /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+c000000005102E2A90000000000000110
+t1359143593
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+c00000000510A864B00000000000001A7
+t1359644235
+s423
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+c00000000510A864B00000000000001E5
+t1359644235
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000510A864E000000000036CDF0
+t1359644238
+s3591664
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000510A864E00000000006B1F40
+t1359644238
+s7020352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c00000000510A864E00000000000FE270
+t1359644238
+s1041008
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000510A864F0000000000322700
+t1359644239
+s3286784
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000510A8650000000000062AD10
+t1359644240
+s6466832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c00000000510A865000000000000015F7
+t1359644240
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c00000000510A8651000000000005C570
+t1359644241
+s378224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c00000000510A86510000000000024190
+t1359644241
+s147856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000510A865200000000003596B0
+t1359644242
+s3511984
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c00000000510A86520000000000000E8D
+t1359644242
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000510A865500000000011BCDF0
+t1359644245
+s18599408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/include/Availability.h
+c00000000510A865C0000000000001B73
+t1359644252
+s7027
+
+N/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision
+c0000000050EF31A80000000000001DB1
+t1357853096
+s7601
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm
+c000000005127F6C80000000000000357
+t1361573576
+s855
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/EZplatformer-Prefix.pch
+c000000005127F6710000000000000147
+t1361573489
+s327
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72.png
+c000000005127F6710000000000000601
+t1361573489
+s1537
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72@2x.png
+c000000005127F6710000000000000B1A
+t1361573489
+s2842
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon.png
+c000000005127F67100000000000004B9
+t1361573489
+s1209
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon@2x.png
+c000000005127F67100000000000008AE
+t1361573489
+s2222
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/assets
+c000000005127F67200000000000009F6
+t1361573490
+s2550
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/EZplatformer.LinkFileList
+c000000005127F6C900000000000000AD
+t1361573577
+s173
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/com.apple.build-tools.platform.validate
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72.png
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon.png
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon@2x.png
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Info.plist
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/PkgInfo
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/ResourceRules.plist
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/assets
+t2
+s0
+
+N/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision
+t2
+s0
+
+N/var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth
+t2
+s0
+
+NEZplatformer/EZplatformer-Info.plist
+c000000005127F6710000000000000609
+t1361573489
+s1545
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7cd659492ed8b641^0f985b492ed8b641^---0#1#0#--18"Check dependencies36"04575422-FCF5-4820-B2BC-A8CDED21F840-
+
+CCodeSign /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+s383266379.393454
+e383266382.519958
+r1
+xCodeSign
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"CodeSign build/Release-iphoneos/EZplatformer.appf1d7644b2ed8b641^2026854e2ed8b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/0000000000000000^1369"CodeSign build/Release-iphoneos/EZplatformer.app    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /usr/bin/codesign --force --sign 896ada9e0c291efba5558b58747b9b61802e5c64 --resource-rules=/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/ResourceRules.plist --entitlements /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app36"16054371-92DC-407A-9C4C-684C5DC4222A-
+
+CCompileC build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s383266377.540232
+e383266377.606485
+r1
+xCompileC
+xbuild/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mmc4778a492ed8b641^5b419b492ed8b641^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm0000000000000000^4306"CompileC build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o EZplatformer/Classes/Main.mm normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -miphoneos-version-min=5 -iquote /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-generated-files.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-own-target-headers.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-all-target-headers.hmap -iquote /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-project-headers.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/DerivedSources/armv7 -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/DerivedSources -F/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch -MMD -MT dependencies -MF /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.d --serialize-diagnostics /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.dia -c /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Classes/Main.mm -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/Main.o36"FE48C8BC-9518-4EAB-960D-09FD183C1B71-
+
+CCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72.png EZplatformer/Icon-72.png
+s383266377.446666
+e383266377.493743
+r1
+xCopyPNGFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72.png
+xEZplatformer/Icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon-72.png EZplatformer/Icon-72.png6f8372492ed8b641^88857e492ed8b641^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72.png0000000000000000^1090"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon-72.png EZplatformer/Icon-72.png    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72.png /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72.png36"76CAE04D-B84A-4FA5-87B3-26EE8EE71398-
+
+CCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png EZplatformer/Icon-72@2x.png
+s383266377.449388
+e383266377.500913
+r1
+xCopyPNGFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png
+xEZplatformer/Icon-72@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png EZplatformer/Icon-72@2x.png172e73492ed8b641^603b80492ed8b641^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72@2x.png0000000000000000^1110"CopyPNGFile "build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png" "EZplatformer/Icon-72@2x.png"    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon-72@2x.png" "/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon-72@2x.png"36"C0D174C5-5D9F-4B20-B3B4-67C076CD00B8-
+
+CCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon.png EZplatformer/Icon.png
+s383266377.376255
+e383266377.445355
+r1
+xCopyPNGFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon.png
+xEZplatformer/Icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon.png EZplatformer/Icon.png276b60492ed8b641^b41e72492ed8b641^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon.png0000000000000000^1078"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon.png EZplatformer/Icon.png    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon.png /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon.png36"A35A6B24-597B-4C61-B785-DD28C3371B74-
+
+CCopyPNGFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon@2x.png EZplatformer/Icon@2x.png
+s383266377.395560
+e383266377.447854
+r1
+xCopyPNGFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon@2x.png
+xEZplatformer/Icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile build/Release-iphoneos/EZplatformer.app/Icon@2x.png EZplatformer/Icon@2x.png956465492ed8b641^26ab72492ed8b641^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon@2x.png0000000000000000^1098"CopyPNGFile "build/Release-iphoneos/EZplatformer.app/Icon@2x.png" "EZplatformer/Icon@2x.png"    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/Icon@2x.png" "/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Icon@2x.png"36"135A712E-E137-4627-B0A0-C3AE7A0379AD-
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/EZplatformer.app/ResourceRules.plist
+s383266377.361000
+e383266377.364823
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+xbuild/Release-iphoneos/EZplatformer.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Release-iphoneos/EZplatformer.app/ResourceRules.plist338b5c492ed8b641^b5705d492ed8b641^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/ResourceRules.plist000000000080d041^1319"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/EZplatformer.app/ResourceRules.plist    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app36"A9BB7810-E480-4A5A-A0B7-50F0936B6D98-
+
+CCpResource EZplatformer/assets build/Release-iphoneos/EZplatformer.app/assets
+s383266377.375606
+e383266377.394273
+r1
+xCpResource
+xEZplatformer/assets
+xbuild/Release-iphoneos/EZplatformer.app/assets
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/Release-iphoneos/EZplatformer.app/assetsd04460492ed8b641^bdfe64492ed8b641^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/assets000000000080d041^1186"CpResource EZplatformer/assets build/Release-iphoneos/EZplatformer.app/assets    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/assets /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app36"CDA87BF6-2875-4B8A-978D-F711E04761BE-
+
+CGenerateDSYMFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer
+s383266379.036104
+e383266379.334787
+r1
+xGenerateDSYMFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Generate /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYMb85c094b2ed8b641^a6b9554b2ed8b641^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM000000000080d041^1126"GenerateDSYMFile build/Release-iphoneos/EZplatformer.app.dSYM build/Release-iphoneos/EZplatformer.app/EZplatformer    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app.dSYM36"4073D0F9-4A07-420D-BE7B-437DF8BDF85E-
+
+CLd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer normal armv7
+s383266377.613368
+e383266379.029224
+r1
+xLd
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer
+xnormal
+xarmv7
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Link /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformereb399d492ed8b641^6c7b074b2ed8b641^---0#0#0#--1942"Ld build/Release-iphoneos/EZplatformer.app/EZplatformer normal armv7    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -L/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos -L/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/lib/armv7 -F/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos -filelist /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/Objects-normal/armv7/EZplatformer.LinkFileList -dead_strip -lstd -lregexp -lzlib -lnme -lcurl_ssl -lpng -ljpeg -lApplicationMain -miphoneos-version-min=5 -framework UIKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework CoreAudio -framework CoreGraphics -framework AudioToolbox -framework AVFoundation -framework Foundation -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/EZplatformer36"E3247A97-44F7-4B53-90AE-ED3335B6E9C5-
+
+CProcessInfoPlistFile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Info.plist EZplatformer/EZplatformer-Info.plist
+s383266377.361777
+e383266377.367519
+r1
+xProcessInfoPlistFile
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Info.plist
+xEZplatformer/EZplatformer-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Process EZplatformer/EZplatformer-Info.plistfab65c492ed8b641^1e165e492ed8b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/EZplatformer-Info.plist0000000000000000^1317"ProcessInfoPlistFile build/Release-iphoneos/EZplatformer.app/Info.plist EZplatformer/EZplatformer-Info.plist    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    builtin-infoPlistUtility EZplatformer/EZplatformer-Info.plist -genpkginfo /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/ResourceRules.plist -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/Info.plist36"3078B59B-FFB5-4FDA-A5F8-009E74C223E9-
+
+CProcessPCH++ /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth EZplatformer/EZplatformer-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s383266377.509042
+e383266377.533294
+r1
+xProcessPCH++
+x/var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth
+xEZplatformer/EZplatformer-Prefix.pch
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile EZplatformer/EZplatformer-Prefix.pch857a82492ed8b641^c49488492ed8b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/EZplatformer-Prefix.pch0000000000000000^4229"ProcessPCH++ /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth EZplatformer/EZplatformer-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch armv7 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -miphoneos-version-min=5 -iquote /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-generated-files.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-own-target-headers.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-all-target-headers.hmap -iquote /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer-project-headers.hmap -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/DerivedSources/armv7 -I/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/DerivedSources -F/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.dia -c /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/EZplatformer/EZplatformer-Prefix.pch -o /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/zx/99gv3sp133d4gq2zfsskndkm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EZplatformer-Prefix-fzbztixemaodmyaqtbkgnfkgxmhc/EZplatformer-Prefix.pch.d36"7A213CA8-F283-44FB-8805-39BFCDC7276E-
+
+CProcessProductPackaging "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision
+s383266379.354433
+e383266379.357691
+r1
+xProcessProductPackaging
+x/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection207"ProcessProductPackaging "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision2fdb5a4b2ed8b641^54905b4b2ed8b641^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision0000000000000000^1157"ProcessProductPackaging "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    builtin-productPackagingUtility "/Users/justinedwards/Library/MobileDevice/Provisioning Profiles/6A094094-0F05-4F1E-A4BE-9C88CABC198C.mobileprovision" -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/embedded.mobileprovision36"6BA1736F-4A0B-4226-8616-F8618F11FC0F-
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent
+s383266379.381562
+e383266379.385360
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection224"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent9ece614b2ed8b641^e8a5624b2ed8b641^---0#0#0#-19%DVTDocumentLocation2@179"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent000000000080d041^1217"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/EZplatformer.build/Release-iphoneos/EZplatformer.build/EZplatformer.xcent36"E6222CAE-64D3-4D3A-AE3E-0FFD23476F79-
+
+CTouch /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+s383266379.365821
+e383266379.373469
+r1
+xTouch
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Touch /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.appd7c15d4b2ed8b641^309c5f4b2ed8b641^---0#0#0#--834"Touch build/Release-iphoneos/EZplatformer.app    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    /usr/bin/touch -c /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app36"C00E417B-A73D-4281-A1D7-2398C266A679-
+
+CValidate /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+s383266382.528108
+e383266383.280426
+r1
+xValidate
+x/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Validate build/Release-iphoneos/EZplatformer.app2b50874e2ed8b641^9be4474f2ed8b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app/0000000000000000^978"Validate build/Release-iphoneos/EZplatformer.app    cd /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@gosu/bin:/Users/justinedwards/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/justinedwards/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/justinedwards/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/flex_sdk_4/bin:/Users/justinedwards/.rvm/bin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/justinedwards/projects/games/haxeflixel/no-one-can-see-you-scream/export/ios/build/Release-iphoneos/EZplatformer.app36"090B09AE-FADE-4153-9F54-B37CC356648A-
+

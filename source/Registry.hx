@@ -16,6 +16,7 @@ class Registry
         public static var level:FlxTilemap;
         public static var Goombas:Goombas;
         public static var player:Player;
+        public static var springs:FlxGroup;
 
         public function Registry()
         {

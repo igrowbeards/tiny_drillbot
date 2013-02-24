@@ -62,8 +62,14 @@ class PlayState_obj : public ::org::flixel::FlxState_obj{
 		virtual Void hitSpikes( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject spikes);
 		Dynamic hitSpikes_dyn();
 
-		virtual Void changeLevel( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject Exit);
+		virtual Void changeLevel( );
 		Dynamic changeLevel_dyn();
+
+		virtual Void fadeOutLevel( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject exitRef);
+		Dynamic fadeOutLevel_dyn();
+
+		virtual Void exit_appear( );
+		Dynamic exit_appear_dyn();
 
 		virtual Void update( );
 

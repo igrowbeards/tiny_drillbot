@@ -34,6 +34,7 @@ class PlayState extends FlxState
 	public var maxFuel:Int;
 	public var elevators:FlxGroup;
 	public var springs:FlxGroup;
+	public var crate:Crate;
 
 	override public function create():Void
 	{
@@ -47,6 +48,8 @@ class PlayState extends FlxState
 		Registry.level = level;
 		Registry.player = player;
 
+		crate = new Crate(7,3);
+
 		// Create Player
 		player = new Player();
 
@@ -55,6 +58,7 @@ class PlayState extends FlxState
 
 		elevators = new FlxGroup();
 		springs = new FlxGroup();
+		Registry.springs = springs;
 
 		var ele1:Elevator = new Elevator(1,4,0,24,60);
 		var ele2:Elevator = new Elevator(37,3,0,25,60);
@@ -92,6 +96,7 @@ class PlayState extends FlxState
 		add(fuelCollected);
 		add(elevators);
 		add(springs);
+		add(crate);
 
 	}
 
@@ -104,10 +109,16 @@ class PlayState extends FlxState
 	{
 		super.update();
 
+		FlxG.collide(player,crate);
+		FlxG.collide(crate,level);
+		FlxG.collide(crate,goombas);
+		FlxG.collide(crate,springs,hitSpring);
+		FlxG.collide(crate,elevators);
 		FlxG.collide(player,level);
 		FlxG.collide(player,elevators);
 		FlxG.collide(goombas,level);
 		FlxG.collide(goombas,spikes);
+		FlxG.collide(goombas,springs,hitSpring);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,fadeOutLevel);
@@ -147,11 +158,11 @@ class PlayState extends FlxState
 		player.reset((FlxG.width / 2) - 4, 12);
 	}
 
-	public function hitSpring(PlayerRef:FlxObject,SpringRef:FlxObject):Void
+	public function hitSpring(firstRef:FlxObject,SpringRef:FlxObject):Void
 	{
-		var p:Player = cast(PlayerRef,Player);
 		var s:Spring = cast(SpringRef,Spring);
-		p.hitSpring();
+		firstRef.velocity.y = -175;
+		firstRef.acceleration.y = -175;
 		s.play("boing");
 		FlxG.play("spring_boing");
 	}

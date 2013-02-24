@@ -54,6 +54,9 @@
 #ifndef INCLUDED_org_flixel_FlxRect
 #include <org/flixel/FlxRect.h>
 #endif
+#ifndef INCLUDED_org_flixel_FlxSound
+#include <org/flixel/FlxSound.h>
+#endif
 #ifndef INCLUDED_org_flixel_FlxSprite
 #include <org/flixel/FlxSprite.h>
 #endif
@@ -99,33 +102,33 @@ Dynamic PlayState_obj::__Create(hx::DynamicArray inArgs)
 
 Void PlayState_obj::parseSprings( ){
 {
-		HX_STACK_PUSH("PlayState::parseSprings","PlayState.hx",231);
+		HX_STACK_PUSH("PlayState::parseSprings","PlayState.hx",245);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(232)
+		HX_STACK_LINE(246)
 		::org::flixel::FlxTilemap springMap = ::org::flixel::FlxTilemap_obj::__new();		HX_STACK_VAR(springMap,"springMap");
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(248)
 		springMap->loadMap(::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map6.csv")),HX_CSTRING("assets/fuel.png"),(int)16,(int)16,null(),null(),null(),null());
-		HX_STACK_LINE(236)
+		HX_STACK_LINE(250)
 		{
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(250)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 			int _g = springMap->heightInTiles;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(250)
 			while(((_g1 < _g))){
-				HX_STACK_LINE(236)
+				HX_STACK_LINE(250)
 				int ty = (_g1)++;		HX_STACK_VAR(ty,"ty");
-				HX_STACK_LINE(238)
+				HX_STACK_LINE(252)
 				{
-					HX_STACK_LINE(238)
+					HX_STACK_LINE(252)
 					int _g3 = (int)0;		HX_STACK_VAR(_g3,"_g3");
 					int _g2 = springMap->widthInTiles;		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(238)
+					HX_STACK_LINE(252)
 					while(((_g3 < _g2))){
-						HX_STACK_LINE(238)
+						HX_STACK_LINE(252)
 						int tx = (_g3)++;		HX_STACK_VAR(tx,"tx");
-						HX_STACK_LINE(240)
+						HX_STACK_LINE(254)
 						if (((springMap->getTile(tx,ty) == (int)1))){
-							HX_STACK_LINE(241)
+							HX_STACK_LINE(255)
 							this->springs->add(::Spring_obj::__new(tx,ty));
 						}
 					}
@@ -141,33 +144,33 @@ HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,parseSprings,(void))
 
 Void PlayState_obj::parseEnemies( ){
 {
-		HX_STACK_PUSH("PlayState::parseEnemies","PlayState.hx",213);
+		HX_STACK_PUSH("PlayState::parseEnemies","PlayState.hx",227);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(214)
+		HX_STACK_LINE(228)
 		::org::flixel::FlxTilemap enemyMap = ::org::flixel::FlxTilemap_obj::__new();		HX_STACK_VAR(enemyMap,"enemyMap");
-		HX_STACK_LINE(216)
+		HX_STACK_LINE(230)
 		enemyMap->loadMap(::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map4.csv")),HX_CSTRING("assets/fuel.png"),(int)16,(int)16,null(),null(),null(),null());
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(232)
 		{
-			HX_STACK_LINE(218)
+			HX_STACK_LINE(232)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 			int _g = enemyMap->heightInTiles;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(218)
+			HX_STACK_LINE(232)
 			while(((_g1 < _g))){
-				HX_STACK_LINE(218)
+				HX_STACK_LINE(232)
 				int ty = (_g1)++;		HX_STACK_VAR(ty,"ty");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(234)
 				{
-					HX_STACK_LINE(220)
+					HX_STACK_LINE(234)
 					int _g3 = (int)0;		HX_STACK_VAR(_g3,"_g3");
 					int _g2 = enemyMap->widthInTiles;		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(220)
+					HX_STACK_LINE(234)
 					while(((_g3 < _g2))){
-						HX_STACK_LINE(220)
+						HX_STACK_LINE(234)
 						int tx = (_g3)++;		HX_STACK_VAR(tx,"tx");
-						HX_STACK_LINE(222)
+						HX_STACK_LINE(236)
 						if (((enemyMap->getTile(tx,ty) == (int)1))){
-							HX_STACK_LINE(223)
+							HX_STACK_LINE(237)
 							this->goombas->addGoomba(tx,ty);
 						}
 					}
@@ -183,37 +186,37 @@ HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,parseEnemies,(void))
 
 Void PlayState_obj::parseFuel( ){
 {
-		HX_STACK_PUSH("PlayState::parseFuel","PlayState.hx",192);
+		HX_STACK_PUSH("PlayState::parseFuel","PlayState.hx",206);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(193)
+		HX_STACK_LINE(207)
 		::org::flixel::FlxTilemap fuelMap = ::org::flixel::FlxTilemap_obj::__new();		HX_STACK_VAR(fuelMap,"fuelMap");
-		HX_STACK_LINE(195)
+		HX_STACK_LINE(209)
 		fuelMap->loadMap(::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map3.csv")),HX_CSTRING("assets/fuel.png"),(int)16,(int)16,null(),null(),null(),null());
-		HX_STACK_LINE(197)
+		HX_STACK_LINE(211)
 		this->fuelGroup = ::org::flixel::FlxGroup_obj::__new(null());
-		HX_STACK_LINE(199)
+		HX_STACK_LINE(213)
 		{
-			HX_STACK_LINE(199)
+			HX_STACK_LINE(213)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 			int _g = fuelMap->heightInTiles;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(199)
+			HX_STACK_LINE(213)
 			while(((_g1 < _g))){
-				HX_STACK_LINE(199)
+				HX_STACK_LINE(213)
 				int ty = (_g1)++;		HX_STACK_VAR(ty,"ty");
-				HX_STACK_LINE(201)
+				HX_STACK_LINE(215)
 				{
-					HX_STACK_LINE(201)
+					HX_STACK_LINE(215)
 					int _g3 = (int)0;		HX_STACK_VAR(_g3,"_g3");
 					int _g2 = fuelMap->widthInTiles;		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(201)
+					HX_STACK_LINE(215)
 					while(((_g3 < _g2))){
-						HX_STACK_LINE(201)
+						HX_STACK_LINE(215)
 						int tx = (_g3)++;		HX_STACK_VAR(tx,"tx");
-						HX_STACK_LINE(203)
+						HX_STACK_LINE(217)
 						if (((fuelMap->getTile(tx,ty) == (int)1))){
-							HX_STACK_LINE(205)
+							HX_STACK_LINE(219)
 							this->fuelGroup->add(::Fuel_obj::__new(tx,ty));
-							HX_STACK_LINE(206)
+							HX_STACK_LINE(220)
 							(this->totalFuel)++;
 						}
 					}
@@ -229,35 +232,35 @@ HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,parseFuel,(void))
 
 Void PlayState_obj::parseSpikes( ){
 {
-		HX_STACK_PUSH("PlayState::parseSpikes","PlayState.hx",172);
+		HX_STACK_PUSH("PlayState::parseSpikes","PlayState.hx",186);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(187)
 		::org::flixel::FlxTilemap spikeMap = ::org::flixel::FlxTilemap_obj::__new();		HX_STACK_VAR(spikeMap,"spikeMap");
-		HX_STACK_LINE(175)
+		HX_STACK_LINE(189)
 		spikeMap->loadMap(::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mapCSV_Group1_Map2.csv")),HX_CSTRING("assets/spikes.png"),(int)16,(int)16,null(),null(),null(),null());
-		HX_STACK_LINE(177)
+		HX_STACK_LINE(191)
 		this->spikes = ::org::flixel::FlxGroup_obj::__new(null());
-		HX_STACK_LINE(179)
+		HX_STACK_LINE(193)
 		{
-			HX_STACK_LINE(179)
+			HX_STACK_LINE(193)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 			int _g = spikeMap->heightInTiles;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(179)
+			HX_STACK_LINE(193)
 			while(((_g1 < _g))){
-				HX_STACK_LINE(179)
+				HX_STACK_LINE(193)
 				int ty = (_g1)++;		HX_STACK_VAR(ty,"ty");
-				HX_STACK_LINE(181)
+				HX_STACK_LINE(195)
 				{
-					HX_STACK_LINE(181)
+					HX_STACK_LINE(195)
 					int _g3 = (int)0;		HX_STACK_VAR(_g3,"_g3");
 					int _g2 = spikeMap->widthInTiles;		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(181)
+					HX_STACK_LINE(195)
 					while(((_g3 < _g2))){
-						HX_STACK_LINE(181)
+						HX_STACK_LINE(195)
 						int tx = (_g3)++;		HX_STACK_VAR(tx,"tx");
-						HX_STACK_LINE(183)
+						HX_STACK_LINE(197)
 						if (((spikeMap->getTile(tx,ty) == (int)1))){
-							HX_STACK_LINE(184)
+							HX_STACK_LINE(198)
 							this->spikes->add(::Spike_obj::__new(tx,ty));
 						}
 					}
@@ -273,21 +276,25 @@ HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,parseSpikes,(void))
 
 Void PlayState_obj::hitEnemy( ::org::flixel::FlxObject PlayerRef,::org::flixel::FlxObject EnemyRef){
 {
-		HX_STACK_PUSH("PlayState::hitEnemy","PlayState.hx",157);
+		HX_STACK_PUSH("PlayState::hitEnemy","PlayState.hx",169);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(PlayerRef,"PlayerRef");
 		HX_STACK_ARG(EnemyRef,"EnemyRef");
-		HX_STACK_LINE(157)
+		HX_STACK_LINE(169)
 		if (((bool((((int(PlayerRef->touching) & int((int)4096))) > (int)0)) && bool((((int(PlayerRef->wasTouching) & int((int)4096))) <= (int)0))))){
-			HX_STACK_LINE(160)
+			HX_STACK_LINE(172)
+			::org::flixel::FlxG_obj::play(HX_CSTRING("stomp"),null(),null(),null());
+			HX_STACK_LINE(173)
 			EnemyRef->kill();
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(174)
 			PlayerRef->velocity->y = (int)-50;
-			HX_STACK_LINE(162)
+			HX_STACK_LINE(175)
 			PlayerRef->acceleration->y = (int)-50;
 		}
 		else{
-			HX_STACK_LINE(165)
+			HX_STACK_LINE(179)
+			::org::flixel::FlxG_obj::play(HX_CSTRING("hurt"),null(),null(),null());
+			HX_STACK_LINE(180)
 			PlayerRef->reset(((Float(::org::flixel::FlxG_obj::width) / Float((int)2)) - (int)4),(int)12);
 		}
 	}
@@ -299,18 +306,20 @@ HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,hitEnemy,(void))
 
 Void PlayState_obj::hitFuel( ::org::flixel::FlxObject Player,::org::flixel::FlxObject fuel){
 {
-		HX_STACK_PUSH("PlayState::hitFuel","PlayState.hx",149);
+		HX_STACK_PUSH("PlayState::hitFuel","PlayState.hx",160);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(Player,"Player");
 		HX_STACK_ARG(fuel,"fuel");
-		HX_STACK_LINE(150)
+		HX_STACK_LINE(161)
 		fuel->kill();
-		HX_STACK_LINE(151)
+		HX_STACK_LINE(162)
 		(this->totalFuel)--;
-		HX_STACK_LINE(152)
+		HX_STACK_LINE(163)
 		(::org::flixel::FlxG_obj::score)++;
-		HX_STACK_LINE(153)
+		HX_STACK_LINE(164)
 		this->fuelCollected->setText(((::org::flixel::FlxG_obj::score + HX_CSTRING("/")) + this->maxFuel));
+		HX_STACK_LINE(165)
+		::org::flixel::FlxG_obj::play(HX_CSTRING("fuel_pickup"),null(),null(),null());
 	}
 return null();
 }
@@ -320,18 +329,20 @@ HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,hitFuel,(void))
 
 Void PlayState_obj::hitSpring( ::org::flixel::FlxObject PlayerRef,::org::flixel::FlxObject SpringRef){
 {
-		HX_STACK_PUSH("PlayState::hitSpring","PlayState.hx",141);
+		HX_STACK_PUSH("PlayState::hitSpring","PlayState.hx",151);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(PlayerRef,"PlayerRef");
 		HX_STACK_ARG(SpringRef,"SpringRef");
-		HX_STACK_LINE(142)
+		HX_STACK_LINE(152)
 		::Player p = hx::TCast< Player >::cast(PlayerRef);		HX_STACK_VAR(p,"p");
-		HX_STACK_LINE(143)
+		HX_STACK_LINE(153)
 		::Spring s = hx::TCast< Spring >::cast(SpringRef);		HX_STACK_VAR(s,"s");
-		HX_STACK_LINE(144)
+		HX_STACK_LINE(154)
 		p->hitSpring();
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(155)
 		s->play(HX_CSTRING("boing"),null());
+		HX_STACK_LINE(156)
+		::org::flixel::FlxG_obj::play(HX_CSTRING("spring_boing"),null(),null(),null());
 	}
 return null();
 }
@@ -341,11 +352,13 @@ HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,hitSpring,(void))
 
 Void PlayState_obj::hitSpikes( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject spikes){
 {
-		HX_STACK_PUSH("PlayState::hitSpikes","PlayState.hx",136);
+		HX_STACK_PUSH("PlayState::hitSpikes","PlayState.hx",145);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(playerRef,"playerRef");
 		HX_STACK_ARG(spikes,"spikes");
-		HX_STACK_LINE(136)
+		HX_STACK_LINE(146)
+		::org::flixel::FlxG_obj::play(HX_CSTRING("hurt"),null(),null(),null());
+		HX_STACK_LINE(147)
 		this->player->reset(((Float(::org::flixel::FlxG_obj::width) / Float((int)2)) - (int)4),(int)12);
 	}
 return null();
@@ -354,24 +367,48 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,hitSpikes,(void))
 
-Void PlayState_obj::changeLevel( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject Exit){
+Void PlayState_obj::changeLevel( ){
 {
-		HX_STACK_PUSH("PlayState::changeLevel","PlayState.hx",129);
+		HX_STACK_PUSH("PlayState::changeLevel","PlayState.hx",138);
 		HX_STACK_THIS(this);
-		HX_STACK_ARG(playerRef,"playerRef");
-		HX_STACK_ARG(Exit,"Exit");
-		HX_STACK_LINE(130)
+		HX_STACK_LINE(139)
 		::org::flixel::FlxG_obj::resetState();
-		HX_STACK_LINE(131)
+		HX_STACK_LINE(140)
 		::org::flixel::plugin::photonstorm::FlxControl_obj::clear();
-		HX_STACK_LINE(132)
+		HX_STACK_LINE(141)
 		::org::flixel::FlxG_obj::score = (int)0;
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,changeLevel,(void))
+HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,changeLevel,(void))
+
+Void PlayState_obj::fadeOutLevel( ::org::flixel::FlxObject playerRef,::org::flixel::FlxObject exitRef){
+{
+		HX_STACK_PUSH("PlayState::fadeOutLevel","PlayState.hx",133);
+		HX_STACK_THIS(this);
+		HX_STACK_ARG(playerRef,"playerRef");
+		HX_STACK_ARG(exitRef,"exitRef");
+		HX_STACK_LINE(133)
+		::org::flixel::FlxG_obj::fade((int)-16777216,(int)1,null(),this->changeLevel_dyn(),null());
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(PlayState_obj,fadeOutLevel,(void))
+
+Void PlayState_obj::exit_appear( ){
+{
+		HX_STACK_PUSH("PlayState::exit_appear","PlayState.hx",129);
+		HX_STACK_THIS(this);
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(PlayState_obj,exit_appear,(void))
 
 Void PlayState_obj::update( ){
 {
@@ -567,6 +604,35 @@ Void PlayState_obj::update( ){
 			HX_STACK_LINE(112)
 			quadTree->destroy();
 			HX_STACK_LINE(112)
+			result;
+		}
+		HX_STACK_LINE(113)
+		{
+			HX_STACK_LINE(113)
+			::org::flixel::FlxBasic ObjectOrGroup1 = this->player;		HX_STACK_VAR(ObjectOrGroup1,"ObjectOrGroup1");
+			::org::flixel::FlxBasic ObjectOrGroup2 = this->exit;		HX_STACK_VAR(ObjectOrGroup2,"ObjectOrGroup2");
+			Dynamic ProcessCallback = null();		HX_STACK_VAR(ProcessCallback,"ProcessCallback");
+			HX_STACK_LINE(113)
+			if (((ObjectOrGroup1 == null()))){
+				HX_STACK_LINE(113)
+				ObjectOrGroup1 = ::org::flixel::FlxG_obj::getState();
+			}
+			HX_STACK_LINE(113)
+			if (((ObjectOrGroup2 == ObjectOrGroup1))){
+				HX_STACK_LINE(113)
+				ObjectOrGroup2 = null();
+			}
+			HX_STACK_LINE(113)
+			::org::flixel::system::FlxQuadTree_obj::divisions = ::org::flixel::FlxG_obj::worldDivisions;
+			HX_STACK_LINE(113)
+			::org::flixel::system::FlxQuadTree quadTree = ::org::flixel::system::FlxQuadTree_obj::recycle(::org::flixel::FlxG_obj::worldBounds->x,::org::flixel::FlxG_obj::worldBounds->y,::org::flixel::FlxG_obj::worldBounds->width,::org::flixel::FlxG_obj::worldBounds->height,null());		HX_STACK_VAR(quadTree,"quadTree");
+			HX_STACK_LINE(113)
+			quadTree->load(ObjectOrGroup1,ObjectOrGroup2,this->fadeOutLevel_dyn(),ProcessCallback);
+			HX_STACK_LINE(113)
+			bool result = quadTree->execute();		HX_STACK_VAR(result,"result");
+			HX_STACK_LINE(113)
+			quadTree->destroy();
+			HX_STACK_LINE(113)
 			result;
 		}
 		HX_STACK_LINE(114)
@@ -811,10 +877,12 @@ Dynamic PlayState_obj::__Field(const ::String &inName,bool inCallProp)
 	case 11:
 		if (HX_FIELD_EQ(inName,"parseSpikes") ) { return parseSpikes_dyn(); }
 		if (HX_FIELD_EQ(inName,"changeLevel") ) { return changeLevel_dyn(); }
+		if (HX_FIELD_EQ(inName,"exit_appear") ) { return exit_appear_dyn(); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"parseSprings") ) { return parseSprings_dyn(); }
 		if (HX_FIELD_EQ(inName,"parseEnemies") ) { return parseEnemies_dyn(); }
+		if (HX_FIELD_EQ(inName,"fadeOutLevel") ) { return fadeOutLevel_dyn(); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"fuelCollected") ) { return fuelCollected; }
@@ -880,6 +948,8 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("hitSpring"),
 	HX_CSTRING("hitSpikes"),
 	HX_CSTRING("changeLevel"),
+	HX_CSTRING("fadeOutLevel"),
+	HX_CSTRING("exit_appear"),
 	HX_CSTRING("update"),
 	HX_CSTRING("destroy"),
 	HX_CSTRING("create"),

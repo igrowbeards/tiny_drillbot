@@ -45,6 +45,10 @@ class Assets {
 			
 			
 			
+			resourceNames.set ("assets/backdrop.png", "assets/backdrop.png");
+			resourceTypes.set ("assets/backdrop.png", "image");
+			
+			
 			resourceNames.set ("assets/bullet.png", "assets/bullet.png");
 			resourceTypes.set ("assets/bullet.png", "image");
 			
@@ -193,8 +197,48 @@ class Assets {
 			resourceTypes.set ("assets/data/vis/bounds.png", "image");
 			
 			
+			resourceNames.set ("assets/driller.png", "assets/driller.png");
+			resourceTypes.set ("assets/driller.png", "image");
+			
+			
+			resourceNames.set ("assets/elevator.png", "assets/elevator.png");
+			resourceTypes.set ("assets/elevator.png", "image");
+			
+			
+			resourceNames.set ("assets/exit_appear.wav", "assets/exit_appear.wav");
+			resourceTypes.set ("assets/exit_appear.wav", "sound");
+			
+			
+			resourceNames.set ("assets/fuel.png", "assets/fuel.png");
+			resourceTypes.set ("assets/fuel.png", "image");
+			
+			
+			resourceNames.set ("assets/fuel_pickup.wav", "assets/fuel_pickup.wav");
+			resourceTypes.set ("assets/fuel_pickup.wav", "sound");
+			
+			
+			resourceNames.set ("assets/fuel_tiles.png", "assets/fuel_tiles.png");
+			resourceTypes.set ("assets/fuel_tiles.png", "image");
+			
+			
+			resourceNames.set ("assets/goomba.png", "assets/goomba.png");
+			resourceTypes.set ("assets/goomba.png", "image");
+			
+			
+			resourceNames.set ("assets/goomba_tiles.png", "assets/goomba_tiles.png");
+			resourceTypes.set ("assets/goomba_tiles.png", "image");
+			
+			
 			resourceNames.set ("assets/HaxeFlixel.svg", "assets/HaxeFlixel.svg");
 			resourceTypes.set ("assets/HaxeFlixel.svg", "text");
+			
+			
+			resourceNames.set ("assets/hurt.wav", "assets/hurt.wav");
+			resourceTypes.set ("assets/hurt.wav", "sound");
+			
+			
+			resourceNames.set ("assets/lava.png", "assets/lava.png");
+			resourceTypes.set ("assets/lava.png", "image");
 			
 			
 			resourceNames.set ("assets/level1.dam", "assets/level1.dam");
@@ -217,6 +261,26 @@ class Assets {
 			resourceTypes.set ("assets/mapCSV_Group1_Map1.csv", "text");
 			
 			
+			resourceNames.set ("assets/mapCSV_Group1_Map2.csv", "assets/mapCSV_Group1_Map2.csv");
+			resourceTypes.set ("assets/mapCSV_Group1_Map2.csv", "text");
+			
+			
+			resourceNames.set ("assets/mapCSV_Group1_Map3.csv", "assets/mapCSV_Group1_Map3.csv");
+			resourceTypes.set ("assets/mapCSV_Group1_Map3.csv", "text");
+			
+			
+			resourceNames.set ("assets/mapCSV_Group1_Map4.csv", "assets/mapCSV_Group1_Map4.csv");
+			resourceTypes.set ("assets/mapCSV_Group1_Map4.csv", "text");
+			
+			
+			resourceNames.set ("assets/mapCSV_Group1_Map5.csv", "assets/mapCSV_Group1_Map5.csv");
+			resourceTypes.set ("assets/mapCSV_Group1_Map5.csv", "text");
+			
+			
+			resourceNames.set ("assets/mapCSV_Group1_Map6.csv", "assets/mapCSV_Group1_Map6.csv");
+			resourceTypes.set ("assets/mapCSV_Group1_Map6.csv", "text");
+			
+			
 			resourceNames.set ("assets/mapCSV_Level1_Map.csv", "assets/mapCSV_Level1_Map.csv");
 			resourceTypes.set ("assets/mapCSV_Level1_Map.csv", "text");
 			
@@ -229,8 +293,48 @@ class Assets {
 			resourceTypes.set ("assets/mapCSV_Level1_Stars.csv", "text");
 			
 			
+			resourceNames.set ("assets/rock_tiles.png", "assets/rock_tiles.png");
+			resourceTypes.set ("assets/rock_tiles.png", "image");
+			
+			
+			resourceNames.set ("assets/spike.png", "assets/spike.png");
+			resourceTypes.set ("assets/spike.png", "image");
+			
+			
+			resourceNames.set ("assets/spikes.png", "assets/spikes.png");
+			resourceTypes.set ("assets/spikes.png", "image");
+			
+			
+			resourceNames.set ("assets/spring.png", "assets/spring.png");
+			resourceTypes.set ("assets/spring.png", "image");
+			
+			
+			resourceNames.set ("assets/spring.wav", "assets/spring.wav");
+			resourceTypes.set ("assets/spring.wav", "sound");
+			
+			
+			resourceNames.set ("assets/spring_tile.png", "assets/spring_tile.png");
+			resourceTypes.set ("assets/spring_tile.png", "image");
+			
+			
+			resourceNames.set ("assets/springboard.png", "assets/springboard.png");
+			resourceTypes.set ("assets/springboard.png", "image");
+			
+			
+			resourceNames.set ("assets/stomp.wav", "assets/stomp.wav");
+			resourceTypes.set ("assets/stomp.wav", "sound");
+			
+			
 			resourceNames.set ("assets/tiles.png", "assets/tiles.png");
 			resourceTypes.set ("assets/tiles.png", "image");
+			
+			
+			resourceNames.set ("assets/tiles.png.bak", "assets/tiles.png.bak");
+			resourceTypes.set ("assets/tiles.png.bak", "binary");
+			
+			
+			resourceNames.set ("assets/work/tiles.psd", "assets/work/tiles.psd");
+			resourceTypes.set ("assets/work/tiles.psd", "binary");
 			
 			
 			initialized = true;
