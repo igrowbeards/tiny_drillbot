@@ -2,6 +2,7 @@ package;
 
 import org.flixel.FlxG;
 import org.flixel.FlxSprite;
+import org.flixel.FlxObject;
 
 class Crate extends FlxSprite {
 
@@ -12,10 +13,11 @@ class Crate extends FlxSprite {
 		//loadGraphic("assets/fuel.png",true,false,8,8);
 		//addAnimation("default",[0,1],15);
 		//play("default");
-		makeGraphic(7,7,0xff00ff00);
+		makeGraphic(6,6,0xff00ff00);
 		solid = true;
 		acceleration.y = 400;
 		drag.x = 200;
+
 
 	}
 
@@ -23,6 +25,12 @@ class Crate extends FlxSprite {
 	{
 		super.update();
 		acceleration.y = 400;
+		if (touching == FlxObject.FLOOR)
+		{
+			velocity.x = 0;
+			acceleration.x = 0;
+			drag.x = 200;
+		}
 	}
 
 }

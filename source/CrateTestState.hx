@@ -20,7 +20,7 @@ import addons.FlxBackdrop;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
 
-class PlayState extends FlxState
+class CrateTestState extends FlxState
 {
 
 	public var level:FlxTilemap;
@@ -44,7 +44,7 @@ class PlayState extends FlxState
 		add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
 
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/rock_tiles.png",8,8,0,0,1,8);
+		level.loadMap(Assets.getText("assets/mapCSV_Group1_crate_test_map.csv"),"assets/rock_tiles.png",8,8,0,0,1,8);
 		Registry.level = level;
 		Registry.player = player;
 
@@ -71,9 +71,9 @@ class PlayState extends FlxState
 		exit.makeGraphic(16,16,0xff666666);
 		exit.exists = false;
 
-		parseSpikes();
-		parseFuel();
-		parseEnemies();
+		//parseSpikes();
+		//parseFuel();
+		//parseEnemies();
 		parseSprings();
 
 		FlxG.worldBounds = new FlxRect(0,0,Std.int(level.width),Std.int(level.height));
@@ -88,13 +88,13 @@ class PlayState extends FlxState
 		fuelCollected.scrollFactor.y = 0;
 
 		add(level);
-		add(spikes);
-		add(fuelGroup);
-		add(exit);
+		//add(spikes);
+		//add(fuelGroup);
+		//add(exit);
 		add(player);
-		add(goombas);
-		add(fuelCollected);
-		add(elevators);
+		//add(goombas);
+		//add(fuelCollected);
+		//add(elevators);
 		add(springs);
 		add(crate);
 
@@ -111,8 +111,8 @@ class PlayState extends FlxState
 
 		FlxG.collide(player,crate);
 		FlxG.collide(crate,level);
-		FlxG.collide(crate,goombas);
-		FlxG.collide(crate,springs,crateHitSpring);
+		//FlxG.collide(crate,goombas);
+		FlxG.overlap(crate,springs,crateHitSpring);
 		FlxG.collide(crate,elevators);
 		FlxG.collide(player,level);
 		FlxG.collide(player,elevators);
@@ -122,7 +122,7 @@ class PlayState extends FlxState
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,fadeOutLevel);
 		FlxG.collide(player,goombas,hitEnemy);
-		FlxG.collide(player,springs,hitSpring);
+		FlxG.overlap(player,springs,hitSpring);
 
 		if (player.y > level.height)
 		{
@@ -130,7 +130,7 @@ class PlayState extends FlxState
 		}
 
 		if (totalFuel == 0) {
-			exit.exists = true;
+			//exit.exists = true;
 		}
 
 	}
@@ -169,24 +169,32 @@ class PlayState extends FlxState
 	public function crateHitSpring(crateRef:FlxObject,springRef:FlxObject):Void
 	{
 		var s:Spring = cast(springRef,Spring);
-		if (springRef.velocity.x > 0)
+
+		if (crateRef.velocity.x == 0)
 		{
-			crateRef.velocity.x = 50;
-			crateRef.acceleration.x = 50;
+			FlxG.log("1");
 			crateRef.velocity.y = -175;
 			crateRef.acceleration.y = -175;
-			s.play("boing");
-			FlxG.play("spring_boing");
 		}
-		else
+		else if (crateRef.velocity.x < 0)
 		{
-			crateRef.velocity.x = -50;
-			crateRef.acceleration.x = 50;
+			FlxG.log("2");
+			crateRef.velocity.x = -40;
+			crateRef.acceleration.x = -40;
 			crateRef.velocity.y = -175;
 			crateRef.acceleration.y = -175;
-			s.play("boing");
-			FlxG.play("spring_boing");
 		}
+		else if (crateRef.velocity.x > 0)
+		{
+			FlxG.log("3");
+			crateRef.velocity.x = 40;
+			crateRef.acceleration.x = 40;
+			crateRef.velocity.y = -175;
+			crateRef.acceleration.y = -175;
+		}
+
+		s.play("boing");
+		FlxG.play("spring_boing");
 	}
 
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void

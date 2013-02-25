@@ -44,7 +44,7 @@ class Goomba extends FlxSprite
 		}
 		else if (facing == FlxObject.RIGHT && !justTouched(FlxObject.RIGHT))
 		{
-			if(overlapsAt(x + 8, y + 1, Registry.level) || overlapsAt(x + 8, y + 1, Registry.springs))
+			if(overlapsAt(x + 8, y + 1, Registry.level))
 			{
 				// do nothing
 			}
@@ -54,7 +54,7 @@ class Goomba extends FlxSprite
 			}
 		}
 		else if (facing == FlxObject.LEFT && !justTouched(FlxObject.LEFT)) {
-			if(overlapsAt(x - 8, y + 1, Registry.level) || overlapsAt(x-8,y + 1, Registry.springs))
+			if(overlapsAt(x - 8, y + 1, Registry.level))
 			{
 				// do nothing
 			}

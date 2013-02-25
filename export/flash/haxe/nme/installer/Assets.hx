@@ -151,6 +151,8 @@ class Assets {
 			resourceTypes.set ("assets/level1.txt", "text");
 			resourceClasses.set ("assets/level1_tileset.tmx", NME_assets_level1_tileset_tmx);
 			resourceTypes.set ("assets/level1_tileset.tmx", "text");
+			resourceClasses.set ("assets/mapCSV_Group1_crate_test_map.csv", NME_assets_mapcsv_group1_crate_test_map_csv);
+			resourceTypes.set ("assets/mapCSV_Group1_crate_test_map.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Group1_Map1.csv", NME_assets_mapcsv_group1_map1_csv);
 			resourceTypes.set ("assets/mapCSV_Group1_Map1.csv", "text");
 			resourceClasses.set ("assets/mapCSV_Group1_Map2.csv", NME_assets_mapcsv_group1_map2_csv);

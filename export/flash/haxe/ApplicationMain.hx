@@ -372,6 +372,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/level1_tileset.tmx");
          
 		
+		if (inName=="assets/mapCSV_Group1_crate_test_map.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_crate_test_map.csv");
+         
+		
 		if (inName=="assets/mapCSV_Group1_Map1.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Group1_Map1.csv");
@@ -536,6 +541,7 @@ class NME_assets_level1_dam extends nme.utils.ByteArray { }
 class NME_assets_level1_dam_bak extends nme.utils.ByteArray { }
 class NME_assets_level1_txt extends nme.utils.ByteArray { }
 class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_crate_test_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map2_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map3_csv extends nme.utils.ByteArray { }
