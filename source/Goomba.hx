@@ -32,6 +32,7 @@ class Goomba extends FlxSprite
 		super.update();
 		acceleration.y = 400;
 
+
 		if (justTouched(FlxObject.LEFT))
 		{
 			facing = FlxObject.RIGHT;
@@ -44,25 +45,32 @@ class Goomba extends FlxSprite
 		}
 		else if (facing == FlxObject.RIGHT && !justTouched(FlxObject.RIGHT))
 		{
-			if(overlapsAt(x + 8, y + 1, Registry.level))
+			if(overlapsAt(x + 8, y + 1, Registry.level) || overlapsAt(x + 8, y + 1, Registry.springs))
 			{
 				// do nothing
 			}
-			else {
+			else if (touching == FlxObject.FLOOR) {
 				velocity.x = -speed;
 				facing = FlxObject.LEFT;
 			}
 		}
 		else if (facing == FlxObject.LEFT && !justTouched(FlxObject.LEFT)) {
-			if(overlapsAt(x - 8, y + 1, Registry.level))
+			if(overlapsAt(x - 8, y + 1, Registry.level) || overlapsAt(x-8,y + 1, Registry.springs))
 			{
 				// do nothing
 			}
-			else {
+			else if (touching == FlxObject.FLOOR) {
 				velocity.x = speed;
 				facing = FlxObject.RIGHT;
 			}
 
 		}
+		else if (facing == FlxObject.LEFT){
+			velocity.x = speed;
+		}
+		else {
+			velocity.x = -speed;
+		}
+
 	}
 }

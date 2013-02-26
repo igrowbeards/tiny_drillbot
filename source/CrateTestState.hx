@@ -51,7 +51,7 @@ class CrateTestState extends FlxState
 		crate = new Crate(7,3);
 
 		// Create Player
-		player = new Player();
+		player = new Player(25,15);
 
 		goombas = new Goombas();
 
@@ -73,7 +73,7 @@ class CrateTestState extends FlxState
 
 		//parseSpikes();
 		//parseFuel();
-		//parseEnemies();
+		parseEnemies();
 		parseSprings();
 
 		FlxG.worldBounds = new FlxRect(0,0,Std.int(level.width),Std.int(level.height));
@@ -92,7 +92,7 @@ class CrateTestState extends FlxState
 		//add(fuelGroup);
 		//add(exit);
 		add(player);
-		//add(goombas);
+		add(goombas);
 		//add(fuelCollected);
 		//add(elevators);
 		add(springs);
@@ -111,13 +111,14 @@ class CrateTestState extends FlxState
 
 		FlxG.collide(player,crate);
 		FlxG.collide(crate,level);
-		//FlxG.collide(crate,goombas);
+		FlxG.collide(crate,goombas);
 		FlxG.overlap(crate,springs,crateHitSpring);
 		FlxG.collide(crate,elevators);
 		FlxG.collide(player,level);
 		FlxG.collide(player,elevators);
 		FlxG.collide(goombas,level);
 		FlxG.collide(goombas,spikes);
+		FlxG.collide(goombas,springs,enemyHitSpring);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,fadeOutLevel);
@@ -129,9 +130,12 @@ class CrateTestState extends FlxState
 			player.reset((FlxG.width / 2) - 4, 12);
 		}
 
-		if (totalFuel == 0) {
-			//exit.exists = true;
+		if (FlxG.keys.justReleased("R"))
+		{
+			FlxG.resetState();
+			FlxControl.clear();
 		}
+
 
 	}
 
@@ -197,6 +201,14 @@ class CrateTestState extends FlxState
 		FlxG.play("spring_boing");
 	}
 
+	public function enemyHitSpring(enemyRef:FlxObject,springRef:FlxObject):Void
+	{
+		var s:Spring = cast(springRef,Spring);
+		enemyRef.velocity.y = -175;
+		enemyRef.acceleration.y = -175;
+		s.play("boing");
+		FlxG.play("spring_boing");
+	}
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
 	{
 		fuel.kill();

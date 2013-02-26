@@ -12,6 +12,7 @@ class Spring extends FlxSprite
 		loadGraphic("assets/spring.png",true,false,8,8);
 		addAnimation("default", [0], 0, false);
 		addAnimation("boing", [1,2,1,0], 20, false);
+		height = 9;
 
 		play("default");
 

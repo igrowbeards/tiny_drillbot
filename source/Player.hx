@@ -10,11 +10,9 @@ import org.flixel.plugin.photonstorm.FlxControlHandler;
 class Player extends FlxSprite
 {
 
-	public function new():Void
+	public function new(X:Int,Y:Int):Void
 	{
-		super();
-		x = 32;
-		y = 8;
+		super(X * 8,Y * 8);
 		loadGraphic("assets/driller.png",true,true,8,8,true);
 		addAnimation("idle", [0,1,2,3], 10, true);
 		addAnimation("walk", [4,5,6,7], 10, true);
