@@ -137,6 +137,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/bullet.png");
          
 		
+		if (inName=="assets/crate.png")
+			 
+            return Assets.getBitmapData ("assets/crate.png");
+         
+		
 		if (inName=="assets/data/autotiles.png")
 			 
             return Assets.getBitmapData ("assets/data/autotiles.png");
@@ -494,6 +499,7 @@ class NME_assets_stomp_wav extends nme.media.Sound { }
 class NME_assets_exit_appear_wav extends nme.media.Sound { }
 class NME_assets_backdrop_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_bullet_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_crate_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_alt_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_base_png extends nme.display.BitmapData { public function new () { super (0, 0); } }

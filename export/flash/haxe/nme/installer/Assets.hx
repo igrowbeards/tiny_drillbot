@@ -57,6 +57,8 @@ class Assets {
 			resourceTypes.set ("assets/backdrop.png", "image");
 			resourceClasses.set ("assets/bullet.png", NME_assets_bullet_png);
 			resourceTypes.set ("assets/bullet.png", "image");
+			resourceClasses.set ("assets/crate.png", NME_assets_crate_png);
+			resourceTypes.set ("assets/crate.png", "image");
 			resourceClasses.set ("assets/data/autotiles.png", NME_assets_data_autotiles_png);
 			resourceTypes.set ("assets/data/autotiles.png", "image");
 			resourceClasses.set ("assets/data/autotiles_alt.png", NME_assets_data_autotiles_alt_png);

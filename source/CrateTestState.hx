@@ -51,7 +51,7 @@ class CrateTestState extends FlxState
 		crate = new Crate(7,3);
 
 		// Create Player
-		player = new Player(25,15);
+		player = new Player(3,15);
 
 		goombas = new Goombas();
 
