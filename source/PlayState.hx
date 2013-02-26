@@ -38,7 +38,6 @@ class PlayState extends FlxState
 
 	override public function create():Void
 	{
-
 		FlxG.bgColor = 0xff000012;
 
 		add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
@@ -51,7 +50,7 @@ class PlayState extends FlxState
 		crate = new Crate(7,3);
 
 		// Create Player
-		player = new Player();
+		player = new Player(3,3);
 
 		goombas = new Goombas();
 
@@ -118,6 +117,7 @@ class PlayState extends FlxState
 		FlxG.collide(player,elevators);
 		FlxG.collide(goombas,level);
 		FlxG.collide(goombas,spikes);
+		FlxG.collide(goombas,springs,enemyHitSpring);
 		FlxG.overlap(player,spikes,hitSpikes);
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,fadeOutLevel);
@@ -169,24 +169,41 @@ class PlayState extends FlxState
 	public function crateHitSpring(crateRef:FlxObject,springRef:FlxObject):Void
 	{
 		var s:Spring = cast(springRef,Spring);
-		if (springRef.velocity.x > 0)
+
+		if (crateRef.velocity.x == 0)
 		{
-			crateRef.velocity.x = 50;
-			crateRef.acceleration.x = 50;
+			FlxG.log("1");
 			crateRef.velocity.y = -175;
 			crateRef.acceleration.y = -175;
-			s.play("boing");
-			FlxG.play("spring_boing");
 		}
-		else
+		else if (crateRef.velocity.x < 0)
 		{
-			crateRef.velocity.x = -50;
-			crateRef.acceleration.x = 50;
+			FlxG.log("2");
+			crateRef.velocity.x = -40;
+			crateRef.acceleration.x = -40;
 			crateRef.velocity.y = -175;
 			crateRef.acceleration.y = -175;
-			s.play("boing");
-			FlxG.play("spring_boing");
 		}
+		else if (crateRef.velocity.x > 0)
+		{
+			FlxG.log("3");
+			crateRef.velocity.x = 40;
+			crateRef.acceleration.x = 40;
+			crateRef.velocity.y = -175;
+			crateRef.acceleration.y = -175;
+		}
+
+		s.play("boing");
+		FlxG.play("spring_boing");
+	}
+
+	public function enemyHitSpring(enemyRef:FlxObject,springRef:FlxObject):Void
+	{
+		var s:Spring = cast(springRef,Spring);
+		enemyRef.velocity.y = -175;
+		enemyRef.acceleration.y = -175;
+		s.play("boing");
+		FlxG.play("spring_boing");
 	}
 
 	public function hitFuel(Player:FlxObject,fuel:FlxObject):Void
