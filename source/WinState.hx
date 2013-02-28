@@ -16,7 +16,7 @@ import addons.FlxBackdrop;
 import org.flixel.plugin.photonstorm.FlxDisplay;
 import org.flixel.plugin.photonstorm.FlxColor;
 
-class MenuState extends FlxState
+class WinState extends FlxState
 {
 
     public var title:FlxText;
@@ -33,29 +33,30 @@ class MenuState extends FlxState
         FlxG.mouse.show();
         add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
 
-        playerGraphic = new FlxSprite(0,75);
+        playerGraphic = new FlxSprite(0,90);
         playerGraphic.loadGraphic("assets/driller.png",true,true,8,8,true);
         playerGraphic.addAnimation("default",[0],false);
         playerGraphic.play("default");
-        playerGraphic.scale.x = 6;
-        playerGraphic.scale.y = 6;
+        playerGraphic.scale.x = 8;
+        playerGraphic.scale.y = 8;
         FlxDisplay.screenCenter(playerGraphic,true,false);
         add(playerGraphic);
 
         //create a button with the label Start and set an on click function
-        var startButton = new FlxButton(0, 210, "Start", onStartClick);
+        var startButton = new FlxButton(0, 175, "PLAY AGAIN", onStartClick);
         //add the button to the state draw list
         add(startButton);
         //center align the button on the stage
         FlxDisplay.screenCenter(startButton,true,false);
 
-        title = new FlxText(10,0,FlxG.width - 22,"TINY DRILLBOT");
+        var menuButton = new FlxButton(0, 200, "MAIN MENU", onMenuClick);
+        FlxDisplay.screenCenter(menuButton,true,false);
+        add(menuButton);
+
+        title = new FlxText(10,20,FlxG.width - 20,"YOU WON");
         title.setFormat(null, 20, 0xffffff, "center");
         add(title);
 
-        instructions = new FlxText(10,110,FlxG.width - 20,"Made for February One Game a Month Entry.\n\nUse left and right arrows to Move (there is no jump).\nCollect all the glowing blue fuel and make it back to the exit before time runs out.");
-        instructions.setFormat(null, 8, 0xffffff, "left");
-        add(instructions);
     }
 
     //The on click handler for the start button
@@ -63,6 +64,12 @@ class MenuState extends FlxState
     {
         //Tell Flixel to change the active game state to the actual game
         FlxG.switchState(new Level2());
+    }
+
+    private function onMenuClick( ):Void
+    {
+        //Tell Flixel to change the active game state to the actual game
+        FlxG.switchState(new MenuState());
     }
 
     override public function destroy():Void

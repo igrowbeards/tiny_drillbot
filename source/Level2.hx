@@ -1,6 +1,7 @@
 package;
 
 import nme.Assets;
+import nme.Lib;
 import nme.geom.Rectangle;
 import nme.net.SharedObject;
 import org.flixel.FlxButton;
@@ -38,11 +39,15 @@ class Level2 extends FlxState
 	public var startY:Int;
 	public var endStartX:Int;
 	public var endStartY:Int;
+	public var timer:FlxText;
+	public var timerVal:Float;
 
 	override public function create():Void
 	{
 		FlxG.bgColor = 0xff000012;
+        FlxG.mouse.hide();
 
+		timerVal = 101;
 
 		add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
 
@@ -88,9 +93,14 @@ class Level2 extends FlxState
 		maxFuel = totalFuel;
 
 		fuelCollected = new FlxText(0,0,100);
-		fuelCollected.text = "0 /" + maxFuel;
+		fuelCollected.setFormat(null, 8, 0xffffff, "left");
+		fuelCollected.text = "0/" + maxFuel;
 		fuelCollected.scrollFactor.x = 0;
 		fuelCollected.scrollFactor.y = 0;
+
+		timer = new FlxText(0, 0, 160);
+		timer.setFormat(null, 8, 0xffffff, "right");
+		timer.text = "500";
 
 		add(level);
 		add(spikes);
@@ -101,6 +111,7 @@ class Level2 extends FlxState
 		add(fuelCollected);
 		add(elevators);
 		add(springs);
+		add(timer);
 
 	}
 
@@ -134,6 +145,21 @@ class Level2 extends FlxState
 			exit.exists = true;
 		}
 
+		timerVal = timerVal - FlxG.elapsed;
+		timer.text = Std.string(FlxU.floor(timerVal));
+
+		if (timerVal <= 0)
+		{
+			FlxG.resetState();
+			FlxControl.clear();
+		}
+
+		if (FlxG.keys.justReleased("R"))
+		{
+			FlxG.resetState();
+			FlxControl.clear();
+		}
+
 	}
 
 	public function exit_appear():Void
@@ -152,9 +178,9 @@ class Level2 extends FlxState
 
 	public function changeLevel():Void
 	{
-		FlxG.resetState();
-		FlxControl.clear();
+        FlxG.switchState(new WinState());
 		FlxG.score = 0;
+		FlxControl.clear();
 	}
 
 	public function hitSpikes(playerRef:FlxObject,spikes:FlxObject):Void
