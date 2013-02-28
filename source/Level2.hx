@@ -20,7 +20,7 @@ import addons.FlxBackdrop;
 import org.flixel.plugin.photonstorm.FlxControl;
 import org.flixel.plugin.photonstorm.FlxControlHandler;
 
-class PlayState extends FlxState
+class Level2 extends FlxState
 {
 
 	public var level:FlxTilemap;
@@ -34,23 +34,31 @@ class PlayState extends FlxState
 	public var maxFuel:Int;
 	public var elevators:FlxGroup;
 	public var springs:FlxGroup;
-	public var crate:Crate;
+	public var startX:Int;
+	public var startY:Int;
+	public var endStartX:Int;
+	public var endStartY:Int;
 
 	override public function create():Void
 	{
 		FlxG.bgColor = 0xff000012;
 
+
 		add(new FlxBackdrop("assets/backdrop.png", 0.8, 0.6, true, true));
 
 		level = new FlxTilemap();
-		level.loadMap(Assets.getText("assets/mapCSV_Group1_Map1.csv"),"assets/rock_tiles.png",8,8,0,0,1,8);
+		level.loadMap(Assets.getText("assets/mapCSV_level2_map.csv"),"assets/rock_tiles.png",8,8,0,0,1,8);
 		Registry.level = level;
 		Registry.player = player;
 
-		crate = new Crate(7,3);
-
 		// Create Player
-		player = new Player(3,3);
+		startX = 3;
+		startY = 1;
+
+		endStartX = 15 * 8;
+		endStartY = 10 * 8;
+
+		player = new Player(startX,startY);
 
 		goombas = new Goombas();
 
@@ -59,15 +67,13 @@ class PlayState extends FlxState
 		springs = new FlxGroup();
 		Registry.springs = springs;
 
-		var ele1:Elevator = new Elevator(1,4,0,24,60);
-		var ele2:Elevator = new Elevator(37,3,0,25,60);
+		var ele1:Elevator = new Elevator(3,9,0,20,60);
 		elevators.add(ele1);
-		elevators.add(ele2);
 
 
 		// Create the Exit
-		exit = new FlxSprite(35 * 8,26 * 8);
-		exit.makeGraphic(16,16,0xff666666);
+		exit = new FlxSprite(3 * 8, 2 * 8 -5);
+		exit.loadGraphic("assets/exit.png");
 		exit.exists = false;
 
 		parseSpikes();
@@ -95,7 +101,6 @@ class PlayState extends FlxState
 		add(fuelCollected);
 		add(elevators);
 		add(springs);
-		add(crate);
 
 	}
 
@@ -108,11 +113,6 @@ class PlayState extends FlxState
 	{
 		super.update();
 
-		FlxG.collide(player,crate);
-		FlxG.collide(crate,level);
-		FlxG.collide(crate,goombas);
-		FlxG.overlap(crate,springs,crateHitSpring);
-		FlxG.collide(crate,elevators);
 		FlxG.collide(player,level);
 		FlxG.collide(player,elevators);
 		FlxG.collide(goombas,level);
@@ -122,7 +122,7 @@ class PlayState extends FlxState
 		FlxG.overlap(player,fuelGroup,hitFuel);
 		FlxG.overlap(player,exit,fadeOutLevel);
 		FlxG.collide(player,goombas,hitEnemy);
-		FlxG.overlap(player,springs,hitSpring);
+		FlxG.collide(player,springs,hitSpring);
 		FlxG.collide(goombas,goombas,goombasCollide);
 
 		if (player.y > level.height)
@@ -160,48 +160,27 @@ class PlayState extends FlxState
 	public function hitSpikes(playerRef:FlxObject,spikes:FlxObject):Void
 	{
 		FlxG.play("hurt");
-		player.reset((FlxG.width / 2) - 4, 12);
+		if (totalFuel == 0)
+		{
+			playerRef.reset(endStartX,endStartY);
+		}
+		else
+		{
+			playerRef.reset(startX * 8, startY * 8);
+		}
 	}
 
 	public function hitSpring(firstRef:FlxObject,SpringRef:FlxObject):Void
 	{
 		var s:Spring = cast(SpringRef,Spring);
-		firstRef.velocity.y = -175;
-		firstRef.acceleration.y = -175;
-		s.play("boing");
-		FlxG.play("spring_boing");
+		if (firstRef.isTouching(FlxObject.DOWN)) {
+			firstRef.velocity.y = -175;
+			firstRef.acceleration.y = -175;
+			s.play("boing");
+			FlxG.play("spring_boing");
+		}
 	}
 
-	public function crateHitSpring(crateRef:FlxObject,springRef:FlxObject):Void
-	{
-		var s:Spring = cast(springRef,Spring);
-
-		if (crateRef.velocity.x == 0)
-		{
-			FlxG.log("1");
-			crateRef.velocity.y = -175;
-			crateRef.acceleration.y = -175;
-		}
-		else if (crateRef.velocity.x < 0)
-		{
-			FlxG.log("2");
-			crateRef.velocity.x = -40;
-			crateRef.acceleration.x = -40;
-			crateRef.velocity.y = -175;
-			crateRef.acceleration.y = -175;
-		}
-		else if (crateRef.velocity.x > 0)
-		{
-			FlxG.log("3");
-			crateRef.velocity.x = 40;
-			crateRef.acceleration.x = 40;
-			crateRef.velocity.y = -175;
-			crateRef.acceleration.y = -175;
-		}
-
-		s.play("boing");
-		FlxG.play("spring_boing");
-	}
 
 	public function enemyHitSpring(enemyRef:FlxObject,springRef:FlxObject):Void
 	{
@@ -233,7 +212,14 @@ class PlayState extends FlxState
 		else
 		{
 			FlxG.play("hurt");
-			PlayerRef.reset((FlxG.width / 2) - 4, 12);
+			if (totalFuel == 0)
+			{
+				PlayerRef.reset(endStartX,endStartY);
+			}
+			else
+			{
+				PlayerRef.reset(startX * 8, startY * 8);
+			}
 		}
 	}
 
@@ -242,7 +228,7 @@ class PlayState extends FlxState
 	{
 		var spikeMap:FlxTilemap = new FlxTilemap();
 
-		spikeMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map2.csv"), "assets/spikes.png", 16, 16);
+		spikeMap.loadMap(Assets.getText("assets/mapCSV_level2_lava.csv"), "assets/spikes.png", 16, 16);
 
 		spikes = new FlxGroup();
 
@@ -262,7 +248,7 @@ class PlayState extends FlxState
 	{
 		var fuelMap:FlxTilemap = new FlxTilemap();
 
-		fuelMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map3.csv"), "assets/fuel.png", 16, 16);
+		fuelMap.loadMap(Assets.getText("assets/mapCSV_level2_fuel.csv"), "assets/fuel.png", 16, 16);
 
 		fuelGroup = new FlxGroup();
 
@@ -283,7 +269,7 @@ class PlayState extends FlxState
 	{
 		var enemyMap:FlxTilemap = new FlxTilemap();
 
-		enemyMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map4.csv"), "assets/fuel.png", 16, 16);
+		enemyMap.loadMap(Assets.getText("assets/mapCSV_level2_enemies.csv"), "assets/fuel.png", 16, 16);
 
 		for (ty in 0...enemyMap.heightInTiles)
 		{
@@ -301,7 +287,7 @@ class PlayState extends FlxState
 	{
 		var springMap:FlxTilemap = new FlxTilemap();
 
-		springMap.loadMap(Assets.getText("assets/mapCSV_Group1_Map6.csv"), "assets/fuel.png", 16, 16);
+		springMap.loadMap(Assets.getText("assets/mapCSV_level2_Map2.csv"), "assets/fuel.png", 16, 16);
 
 		for (ty in 0...springMap.heightInTiles)
 		{

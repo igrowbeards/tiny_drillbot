@@ -18,7 +18,7 @@ class Elevator extends FlxSprite
 		loadGraphic("assets/elevator.png");
 
 		startPoint = new FlxPoint(X * 8, Y * 8);
-		endPoint = new FlxPoint((X + Width) * 8, (Y + Height) * 8);
+		endPoint = new FlxPoint((X + Width) * 8, ((Y + Height) * 8) - Y * 8);
 
 		if (Width > 0)
 		{

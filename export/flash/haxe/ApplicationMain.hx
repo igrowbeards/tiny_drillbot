@@ -327,6 +327,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/elevator.png");
          
 		
+		if (inName=="assets/exit.png")
+			 
+            return Assets.getBitmapData ("assets/exit.png");
+         
+		
 		if (inName=="assets/fuel.png")
 			 
             return Assets.getBitmapData ("assets/fuel.png");
@@ -382,6 +387,21 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mapCSV_Group1_crate_test_map.csv");
          
 		
+		if (inName=="assets/mapCSV_Group1_fuel.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_fuel.csv");
+         
+		
+		if (inName=="assets/mapCSV_Group1_level1_enemies.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_level1_enemies.csv");
+         
+		
+		if (inName=="assets/mapCSV_Group1_map.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_map.csv");
+         
+		
 		if (inName=="assets/mapCSV_Group1_Map1.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Group1_Map1.csv");
@@ -412,6 +432,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mapCSV_Group1_Map6.csv");
          
 		
+		if (inName=="assets/mapCSV_Group1_spikes.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Group1_spikes.csv");
+         
+		
 		if (inName=="assets/mapCSV_Level1_Map.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Level1_Map.csv");
@@ -425,6 +450,61 @@ class ApplicationMain {
 		if (inName=="assets/mapCSV_Level1_Stars.csv")
 			 
 			 return Assets.getText ("assets/mapCSV_Level1_Stars.csv");
+         
+		
+		if (inName=="assets/mapCSV_level2_enemies.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_level2_enemies.csv");
+         
+		
+		if (inName=="assets/mapCSV_level2_fuel.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_level2_fuel.csv");
+         
+		
+		if (inName=="assets/mapCSV_level2_lava.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_level2_lava.csv");
+         
+		
+		if (inName=="assets/mapCSV_level2_map.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_level2_map.csv");
+         
+		
+		if (inName=="assets/mapCSV_level2_Map2.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_level2_Map2.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level_1_fuel.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level_1_fuel.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level_1_level1_enemies.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level_1_level1_enemies.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level_1_map.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level_1_map.csv");
+         
+		
+		if (inName=="assets/mapCSV_Level_1_spikes.csv")
+			 
+			 return Assets.getText ("assets/mapCSV_Level_1_spikes.csv");
+         
+		
+		if (inName=="assets/new-level1.dam")
+			 
+			 return Assets.getText ("assets/new-level1.dam");
+         
+		
+		if (inName=="assets/new-level1.dam.bak")
+			 
+			 return Assets.getText ("assets/new-level1.dam.bak");
          
 		
 		if (inName=="assets/rock_tiles.png")
@@ -537,6 +617,7 @@ class NME_assets_data_vcr_stop_png extends nme.display.BitmapData { public funct
 class NME_assets_data_vis_bounds_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_driller_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_elevator_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_exit_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_fuel_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_goomba_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -548,15 +629,30 @@ class NME_assets_level1_dam_bak extends nme.utils.ByteArray { }
 class NME_assets_level1_txt extends nme.utils.ByteArray { }
 class NME_assets_level1_tileset_tmx extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_crate_test_map_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_fuel_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_level1_enemies_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map1_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map2_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map3_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map4_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map5_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_group1_map6_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_group1_spikes_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_map_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_sky_csv extends nme.utils.ByteArray { }
 class NME_assets_mapcsv_level1_stars_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level2_enemies_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level2_fuel_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level2_lava_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level2_map_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level2_map2_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level_1_fuel_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level_1_level1_enemies_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level_1_map_csv extends nme.utils.ByteArray { }
+class NME_assets_mapcsv_level_1_spikes_csv extends nme.utils.ByteArray { }
+class NME_assets_new_level1_dam extends nme.utils.ByteArray { }
+class NME_assets_new_level1_dam_bak extends nme.utils.ByteArray { }
 class NME_assets_rock_tiles_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spike_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_spikes_png extends nme.display.BitmapData { public function new () { super (0, 0); } }

@@ -1,6 +1,7 @@
 package;
 
 import org.flixel.FlxSprite;
+import org.flixel.FlxObject;
 
 class Spring extends FlxSprite
 {
@@ -15,6 +16,5 @@ class Spring extends FlxSprite
 		height = 9;
 
 		play("default");
-
 	}
 }
